@@ -1,0 +1,207 @@
+\documentclass[11pt, a4paper]{article}
+% helpful packages.
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage[cjk]{kotex}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\fontfamily{georgia}\selectfont
+\usepackage{relsize}
+\usepackage{anyfontsize}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{setspace}
+
+% global formatting tweaks.
+\pagestyle{empty}
+\geometry{margin=0.5in}
+\setlength\parindent{0pt}
+\setlist{nosep}
+\renewcommand\labelitemi{--}
+% new commands!
+\newcommand{\name}[1]{\begin{center}\section*{\huge #1}\end{center}}
+\newcommand{\topinfo}[1]{\begin{center}\vspace{-0.2cm}#1\vspace{-0.2cm}\end{center}}
+\newcommand{\resumesection}[1]{\vspace{-0.2cm}\section*{#1}\vspace{-0.2cm}\hrule\vspace{0.2cm}}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdfborder={0 0 1},
+}
+
+\definecolor{darknavy}{RGB}{0,45,140}
+\definecolor{deepnavy}{RGB}{0,25,100}
+
+\begin{document}
+\name{Jihwan Oh}
+\onehalfspacing
+    \topinfo{KAIST, Daejeon, Republic of Korea}
+\onehalfspacing
+\topinfo{\href{mailto:dhwlghksy@gmail.com}{dhwlghksy@gmail.com} \; | \; \href{https://www.linkedin.com/in/jihwan-oh-21a772305}{\underline{\textcolor{blue}{Linkedin}}} \; | \;
+\href{https://github.com/jihwan01}{\underline{\textcolor{blue}{Github}}}}
+\setstretch{1.178}
+
+\resumesection{Research Interests}
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item Hardware–software co-design and cross-layer optimization for efficient computing
+  \item Heterogeneous architectures, energy-efficient systems, and specialized accelerators
+\end{itemize}
+
+\resumesection{Education}
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item \textbf{Korea Advanced Institute of Science and Technology (KAIST)} \hfill Feb.\ 2019 -- Feb.\ 2026\\[-0.2em]
+  {\smaller[0.6] B.S. in Electrical Engineering (Primary Major), Computer Science (Double Major)}\\[-0.2em]
+  {\smaller[0.6] GPA: 4.07/4.3, \textit{Summa Cum Laude (expected)}; Dean's List: Spring 2019, Spring 2024}
+\end{itemize}
+
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item \textbf{Georgia Institute of Technology} \hfill Jan.\ 2025 -- Jul.\ 2025\\[-0.2em]
+  {\smaller[0.6] Exchange Program, School of Electrical and Computer Engineering; GPA: 4.0/4.0}
+\end{itemize}
+
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item \textbf{Chungbuk Science High School} \hfill Mar.\ 2017 -- Feb.\ 2019\\[-0.2em]
+  {\smaller[0.6] Selected for Early Admission to KAIST}
+\end{itemize}
+\resumesection{Publications}
+
+% ----- First publication -----
+\noindent
+\parbox[t]{0.88\textwidth}{%
+\textbf{{Characterizing Compute–Communication Overlap in GPU-Accelerated \\ Distributed Deep Learning: Performance and Power Implications}}%
+}%
+\hfill
+\parbox[t]{0.10\textwidth}{%
+\raggedleft May.\ 2025%
+}\\[-0.3em]
+
+{\smaller[0.6] Seonho Lee, \underline{\textbf{\textit{Jihwan Oh}}}, Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan}\\[-0.2em]
+{\smaller[0.6]\textit{Poster presented at ISPASS 2025}, \href{https://arxiv.org/abs/2507.03114}{arXiv:2507.03114}}
+
+\vspace{0.2cm}
+
+% ----- Second publication -----
+\noindent
+\begin{minipage}[t]{0.85\textwidth}
+\textbf{{GPU-Aware Collective Communication Protocols Leveraging \\%
+the TMA Unit to Mitigate Compute–Communication Overlap Overheads}}%
+\end{minipage}%
+\begin{minipage}[t]{0.15\textwidth}
+\raggedleft \mbox{(In progress)}%
+\end{minipage}\\[-0.3em]
+
+{\smaller[0.6] \underline{\textbf{\textit{Jihwan Oh}}}, Seokjin Go, Junkyum Kim, Jongse Park, Divya Mahajan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{Research Experience}
+
+\textbf{Systems Infrastructure and Architecture Research Lab, Georgia Tech} \hfill Jan.\ 2025 -- Present
+\begin{description}[wide = 0pt]
+    \item \textit{Undergraduate Researcher (Advisor: Prof.\ Divya Mahajan)} 
+\end{description}
+\begin{itemize}[leftmargin=1.2em]
+  \item Characterized the performance impact of compute–communication overlap in large-scale distributed LLM training, evaluating execution-time and power implications under various parallelism configurations.
+
+  \item Led a project to identify the root causes of compute–communication overlap overheads hidden at the software level through hardware-level analysis. Proposed a new NCCL (NVIDIA Collective Communication Library) protocol leveraging NVIDIA’s novel hardware unit, the Tensor Memory Accelerator (TMA), to optimize the data path and mitigate these overheads.
+
+\end{itemize}
+
+\textbf{Computer Architecture and Systems Lab, KAIST} \hfill Sep.\ 2024 -- Dec.\ 2024
+\begin{description}[wide = 0pt]
+    \item \textit{Individual Researcher (Advisor: Prof.\ Jongse Park) } 
+\end{description}
+\begin{itemize}[leftmargin=1.2em]
+  \item Conducted a study based on \textit{NeuPIMs} (ASPLOS 2024), exploring workload balancing strategies to mitigate performance degradation in heterogeneous NPU–PIM systems.
+  \item Participated in research optimizing quantization operations on Processing-in-Memory (PIM) architectures to improve computational efficiency.
+
+\end{itemize}
+
+\textbf{Urban Robotics Lab, KAIST} \hfill May.\ 2024 -- Jun.\ 2024 
+\begin{description}[wide = 0pt]
+    \item \textit{Individual Researcher (Advisor: Prof.\ Hyun Myung) } 
+\end{description}
+\begin{itemize}[leftmargin=1.2em]
+  \item Implemented SLAM algorithms and ROS-based path planning systems for mobile robotics.
+\end{itemize}
+
+\textbf{Robotics and Computer Vision Lab, KAIST} \hfill Jul.\ 2020 -- Dec.\ 2020 
+\begin{description}[wide = 0pt]
+    \item \textit{Individual Researcher (Advisor: Prof.\ In So Kweon) } 
+\end{description}
+\begin{itemize}[leftmargin=1.2em]
+  \item Conducted a project to enhance the performance of \textit{Sign Language Transformers} (CVPR 2020) by leveraging pseudo-labeling techniques to improve translation accuracy.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{Teaching and Professional Experience}
+\textbf{CS.10001: Introduction to Programming, KAIST}, Teaching Assistant  \hfill Sep.\ 2025 -- Present
+
+\textbf{Yulmae Academy}, Programming Instructor \hfill Dec.\ 2023 -- Dec.\ 2024
+\begin{itemize}[leftmargin=1.2em]
+  \item Taught C, Python, and introductory machine learning to science high school students.
+\end{itemize}
+
+\textbf{CS.93000: Immersion Camp (Coding Camp), KAIST}, Teaching Assistant \hfill Aug.\ 2023 -- Feb.\ 2024
+
+\textbf{Republic of Korea Air Force}, Software Developer \hfill Aug.\ 2021 -- May.\ 2023
+\begin{itemize}[leftmargin=1.2em]
+  \item Developed and refactored a VR flight-training system using Unreal Engine 4 and C++, improving realism and training efficiency.
+  \item Collaborated with a small team of developers using Git for version control and incorporated feedback from real pilots to refine the simulator.
+\end{itemize}
+
+
+\resumesection{Academic Activities}
+\textbf{Poster Presentation}, ISPASS 2025 -- Ghent, Belgium \hfill May.\ 2025
+\begin{itemize}[leftmargin=1.2em]
+  \item Presented poster on ``Characterizing Compute--Communication Overlap in GPU-Accelerated Distributed Deep Learning''.
+\end{itemize}
+
+\textbf{Attendee}, ISCA 2025 and uArch Workshop -- Tokyo, Japan \hfill Jun.\ 2025
+\begin{itemize}[leftmargin=1.2em]
+  \item Selected as a full travel grant recipient to attend ISCA 2025 and participate in the uArch Workshop.
+\end{itemize}
+
+\resumesection{Awards and Scholarships}
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item \textbf{Next-Generation Engineer Award} \hfill 2025 \\ Institute for Promotion of Engineering and Science of Korea (IPESK) 
+  \item \textbf{Undergraduate Architecture Mentoring Workshop Travel Grant} \hfill 2025 \\ 7th uArch Workshop / ISCA 2025 
+  \item \textbf{Student Travel Grant}, IEEE ISPASS 2025 \hfill 2025
+  \item \textbf{Dean's List}, School of Electrical Engineering, KAIST \hfill 2024
+  \item \textbf{Korea--U.S. Student Exchange Program Scholarship}, KIAT \hfill 2024
+  \item \textbf{National Science and Technology Scholarship}, Korea Government \hfill 2022 -- 2024
+  \item \textbf{Dean's List}, Freshman Division, KAIST \hfill 2019
+  \item \textbf{Minister of Education Award}, Ministry of Education (STEAM R\&E Program) \hfill 2018
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumesection{Leadership and Extracurricular Activities}
+
+\textbf{KAIST Buddy Program} \hfill 2025  
+\begin{itemize}[leftmargin=1.2em]
+  \item Supported incoming international students by facilitating academic and cultural onboarding
+\end{itemize}
+
+\textbf{ICISTS}, Public Relations Head \hfill 2019 -- 2021  
+\begin{itemize}[leftmargin=1.2em]
+  \item Designed and executed PR campaigns for the student-led startup conference \textit{GRAFFITI}
+  \item Coordinated founders' talks and project-based sessions, bridging industry and academia
+  \item Grew attendance to 150{+} participants through targeted outreach and branding
+\end{itemize}
+
+\textbf{Summer Mentoring Camp}, Rural Education Initiative \hfill 2019  
+\begin{itemize}[leftmargin=1.2em]
+  \item Planned and delivered on-site STEM lessons and career mentoring sessions for middle school students in rural Korea
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumesection{Technical Skills}
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item \textbf{Programming Languages:} C/C++, Python, Rust, SystemVerilog, Verilog
+  \item \textbf{Libraries and Tools:} CUDA, PyTorch, NCCL, CUTLASS, cuBLAS; Megatron-LM, Megatron-DeepSpeed; Nsight Compute, Nsight Systems; Unreal Engine 4, Git
+\end{itemize}
+\end{document}
