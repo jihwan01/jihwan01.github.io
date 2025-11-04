@@ -40,7 +40,7 @@ author_profile: true
 <p style="color: #666; font-style: italic; margin: 5px 0;">Systems Infrastructure and Architecture Research Lab, Georgia Tech</p>
 <p style="color: #0366d6; font-weight: 500; margin: 5px 0;">Advisor: Prof. Divya Mahajan</p>
 
-<p style="margin-top: 15px; line-height: 1.6;">Characterized performance overhead when compute and communication operations execute concurrently for latency hiding in distributed LLM training. Analyzed how overlap timing affects end-to-end latency and energy consumption across different parallelism strategies (data, tensor, pipeline) and model sizes using <strong>Megatron-LM</strong> and <strong>Megatron-DeepSpeed</strong> frameworks.</p>
+<p style="margin-top: 15px; line-height: 1.6;">Characterized performance overhead when compute and communication operations execute concurrently for latency hiding in distributed LLM training. Analyzed how overlap timing affects end-to-end latency and energy consumption across different parallelism strategies and model sizes using <strong>Megatron-LM</strong> and <strong>Megatron-DeepSpeed</strong> frameworks.</p>
 
 <p style="margin-top: 12px; line-height: 1.6;">Conducted comprehensive experiments with <strong>PyTorch Profiler</strong>, <strong>Nsight Compute</strong>, and <strong>Nsight Systems</strong> for detailed profiling, and <strong>Zeus Framework</strong> for energy measurements. Uncovered critical insights about the trade-offs between concurrent execution and resource contention in large-scale distributed training systems.</p>
 

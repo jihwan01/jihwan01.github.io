@@ -53,15 +53,13 @@ Seonho Lee, **Jihwan Oh**, Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 
 ## Technical Skills
 
-**Programming & Scripting**: C/C++, Python, CUDA, Verilog, Assembly (x86, RISC-V)
+**Programming & Scripting**: C/C++, Python, CUDA, Verilog, SystemVerilog, Assembly (x86)
 
 **AI/ML Frameworks**: PyTorch, Megatron-LM, Megatron-DeepSpeed, Zeus Framework
 
 **GPU & HPC Tools**: NVIDIA NCCL, CUTLASS, cuBLAS, Nsight Compute, Nsight Systems
 
 **Systems & Platforms**: Linux, Docker, Git, ROS, Unreal Engine 4
-
-**Hardware & Architecture**: GPU Architecture (NVIDIA Hopper, Ampere), Processing-in-Memory (PIM), NPU
 
 ---
 
