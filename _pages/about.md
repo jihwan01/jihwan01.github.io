@@ -51,6 +51,20 @@ Seonho Lee, **Jihwan Oh**, Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 
 ---
 
+## Technical Skills
+
+**Programming & Scripting**: C/C++, Python, CUDA, Verilog, Assembly (x86, RISC-V)
+
+**AI/ML Frameworks**: PyTorch, Megatron-LM, Megatron-DeepSpeed, Zeus Framework
+
+**GPU & HPC Tools**: NVIDIA NCCL, CUTLASS, cuBLAS, Nsight Compute, Nsight Systems
+
+**Systems & Platforms**: Linux, Docker, Git, ROS, Unreal Engine 4
+
+**Hardware & Architecture**: GPU Architecture (NVIDIA Hopper, Ampere), Processing-in-Memory (PIM), NPU
+
+---
+
 <div style="text-align: center; margin-top: 30px; padding: 15px; background-color: #f0f8ff; border-radius: 8px;">
   <p>📧 <a href="mailto:jihwanoh1@gatech.edu">jihwanoh1@gatech.edu</a> | <a href="mailto:dhdudrby@kaist.ac.kr">dhdudrby@kaist.ac.kr</a> | 🔗 <a href="https://github.com/jihwan01">GitHub</a></p>
 </div>

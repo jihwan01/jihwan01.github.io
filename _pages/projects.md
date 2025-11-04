@@ -26,9 +26,11 @@ author_profile: true
 <p style="color: #666; font-style: italic; margin: 5px 0;">Systems Infrastructure and Architecture Research Lab, Georgia Tech</p>
 <p style="color: #0366d6; font-weight: 500; margin: 5px 0;">Advisor: Prof. Divya Mahajan</p>
 
-<p style="margin-top: 15px; line-height: 1.6;">Leading follow-up research to develop solutions for mitigating overhead occurred in concurrent execution between computation and communication in distributed LLM training. Conducted kernel-level profiling to identify root causes of performance degradation, revealing that hardware resource contention, obscured by software abstractions, causes individual kernels to execute slower despite end-to-end latency improvements from pipelining.</p>
+<p style="margin-top: 15px; line-height: 1.6;">Leading follow-up research to develop solutions for compute-communication overlap in distributed LLM training. Conducted kernel-level profiling using <strong>Nsight Compute</strong> and <strong>Nsight Systems</strong> to identify root causes of performance degradation, revealing that hardware resource contention—obscured by software abstractions—causes individual kernels to execute slower despite end-to-end latency improvements from pipelining.</p>
 
-<p style="margin-top: 12px; line-height: 1.6;">Built custom micro-benchmarks to analyze hardware resource utilization patterns. Developing novel optimization techniques leveraging modern GPU architecture features to improve communication efficiency, with initial results showing promising performance improvements.</p>
+<p style="margin-top: 12px; line-height: 1.6;">Built custom micro-benchmarks using <strong>NVIDIA's cuBLAS, CUTLASS, and NCCL</strong> libraries to analyze hardware resource utilization patterns. Developing novel optimization techniques leveraging modern GPU architecture features to improve communication efficiency, with initial results showing promising performance improvements.</p>
+
+<p style="margin-top: 10px; color: #666; font-size: 0.9em;"><strong>Tools & Technologies:</strong> CUDA, NCCL, CUTLASS, cuBLAS, Nsight Compute, Nsight Systems, Python, C++</p>
 
 </div>
 
@@ -38,9 +40,11 @@ author_profile: true
 <p style="color: #666; font-style: italic; margin: 5px 0;">Systems Infrastructure and Architecture Research Lab, Georgia Tech</p>
 <p style="color: #0366d6; font-weight: 500; margin: 5px 0;">Advisor: Prof. Divya Mahajan</p>
 
-<p style="margin-top: 15px; line-height: 1.6;">Characterized performance overhead when compute and communication operations execute concurrently for latency hiding in distributed LLM training. Analyzed how overlap timing affects end-to-end latency and energy consumption across different parallelism strategies and model sizes.</p>
+<p style="margin-top: 15px; line-height: 1.6;">Characterized performance overhead when compute and communication operations execute concurrently for latency hiding in distributed LLM training. Analyzed how overlap timing affects end-to-end latency and energy consumption across different parallelism strategies (data, tensor, pipeline) and model sizes using <strong>Megatron-LM</strong> and <strong>Megatron-DeepSpeed</strong> frameworks.</p>
 
-<p style="margin-top: 12px; line-height: 1.6;">Conducted comprehensive experiments using Megatron-LM framework across various configurations, uncovering critical insights about the trade-offs between concurrent execution and resource contention in large-scale distributed training systems.</p>
+<p style="margin-top: 12px; line-height: 1.6;">Conducted comprehensive experiments with <strong>PyTorch Profiler</strong>, <strong>Nsight Compute</strong>, and <strong>Nsight Systems</strong> for detailed profiling, and <strong>Zeus Framework</strong> for energy measurements. Uncovered critical insights about the trade-offs between concurrent execution and resource contention in large-scale distributed training systems.</p>
+
+<p style="margin-top: 10px; color: #666; font-size: 0.9em;"><strong>Tools & Technologies:</strong> Megatron-LM, Megatron-DeepSpeed, PyTorch Profiler, Nsight Compute, Nsight Systems, Zeus Framework, Python</p>
 
 <p style="margin-top: 15px;"><strong>Publication:</strong> <a href="https://arxiv.org/abs/2507.03114" target="_blank">IEEE ISPASS 2025</a> (2nd author, poster presentation)</p>
 
