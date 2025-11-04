@@ -1,19 +1,33 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Jihwan Oh - Personal Academic Website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+**Personal academic website showcasing research in Computer Architecture and Systems**
 
-# Getting Started
+## About Me
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+I am a Ph.D. applicant passionate about hardware-software co-design, cross-layer optimization, and specialized accelerators. This website showcases my research experience, publications, and academic background.
 
-See more info at https://academicpages.github.io/
+## Research Areas
+
+- Hardware-Software Co-Design
+- Cross-Layer Optimization
+- Specialized Accelerators (PIM, NPU)
+- Multi-GPU Systems Optimization
+- Energy-Efficient Computing
+
+## Website Sections
+
+- **Home**: Introduction and research overview
+- **Publications**: Published papers and conference presentations
+- **Research**: Detailed description of research projects and interests
+- **CV**: Complete academic curriculum vitae
+
+## Contact
+
+- **Email**: ojh011016@kaist.ac.kr
+- **GitHub**: [jihwan01](https://github.com/jihwan01)
+- **Institution**: Korea Advanced Institute of Science and Technology (KAIST)
+
+---
 
 ## Running locally
 
