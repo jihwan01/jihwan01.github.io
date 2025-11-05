@@ -8,10 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-<div style="background-color: #e3f2fd; padding: 20px; border-left: 5px solid #2196F3; margin: 20px 0; border-radius: 5px;">
-  <h2 style="margin-top: 0; font-size: 1.4em;">📚 Applying for PhD Programs (Fall 2026)</h2>
-  <p style="font-size: 0.95em; margin-bottom: 0; line-height: 1.6;">
-    <strong>Research Interests:</strong> Computer Architecture & Systems • HW-SW Co-Design • Domain Specific Accelerator
+<div style="background-color: #1e3a5f; padding: 20px; border-left: 5px solid #4a9eff; margin: 20px 0; border-radius: 5px;">
+  <h2 style="margin-top: 0; font-size: 1.4em; color: #ffffff;">📚 Applying for PhD Programs (Fall 2026)</h2>
+  <p style="font-size: 0.95em; margin-bottom: 0; line-height: 1.6; color: #e0e0e0;">
+    <strong style="color: #ffffff;">Research Interests:</strong> Computer Architecture & Systems • HW-SW Co-Design • Domain Specific Accelerator
   </p>
 </div>
 
