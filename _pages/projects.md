@@ -47,11 +47,11 @@ author_profile: true
 
 <div style="background: #1a202c; border: 1px solid #4a5568; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
 
-<h3 style="margin-top: 0; color: #ffffff;"><strong>NPU-PIM Heterogeneous System Optimization, Domain specific optimization</strong></h3>
+<h3 style="margin-top: 0; color: #ffffff;"><strong>NPU-PIM Heterogeneous System Optimization</strong></h3>
 <p style="color: #a0aec0; font-style: italic; margin: 5px 0;">Computer Architecture and Systems Lab, KAIST</p>
 <p style="color: #60a5fa; font-weight: 500; margin: 5px 0;">Advisor: Prof. Jongse Park</p>
 
-<p style="margin-top: 15px; line-height: 1.6; color: #e2e8f0;">Developed workload balancing strategies for heterogeneous NPU-PIM systems based on <em>NeuPIMs</em> (ASPLOS 2024). </p>
+<p style="margin-top: 15px; line-height: 1.6; color: #e2e8f0;">Analyzed <strong>NeuPIMs</strong>, a novel NPU–PIM heterogeneous simulator (ASPLOS 2024), and identified load imbalance issues in LLM inference workloads. Through systematic profiling, discovered that smaller batch sizes and larger models cause NPU to become the critical path while PIM remains underutilized. Proposed workload balancing strategy by distributing FFN operations—the primary bottleneck—across both NPU and PIM units to improve overall system utilization.</p>
 
 </div>
 
