@@ -10,9 +10,10 @@ I am a Ph.D. applicant passionate about hardware-software co-design, cross-layer
 
 - Hardware-Software Co-Design
 - Cross-Layer Optimization
-- Specialized Accelerators (PIM, NPU)
+- Specialized Accelerators
 - Multi-GPU Systems Optimization
 - Energy-Efficient Computing
+- Processing In Memory, Compute In Memory
 
 ## Website Sections
 
