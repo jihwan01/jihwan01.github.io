@@ -23,7 +23,7 @@ I am a Ph.D. applicant passionate about hardware-software co-design, cross-layer
 
 ## Contact
 
-- **Email**: ojh011016@kaist.ac.kr
+- **Email**: dhdudrby@kaist.ac.kr
 - **GitHub**: [jihwan01](https://github.com/jihwan01)
 - **Institution**: Korea Advanced Institute of Science and Technology (KAIST)
 
