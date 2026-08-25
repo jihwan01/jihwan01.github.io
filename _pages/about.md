@@ -1,68 +1,450 @@
 ---
 permalink: /
 title: "Jihwan Oh"
-excerpt: "About me"
+excerpt: "Computer Architecture, Systems for ML, and Hardware-Software Co-Design"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<div style="background-color: #1e3a5f; padding: 20px; border-left: 5px solid #4a9eff; margin: 20px 0; border-radius: 5px;">
-  <h2 style="margin-top: 0; font-size: 1.4em; color: #ffffff;">📚 Applying for PhD Programs (Fall 2026)</h2>
-  <p style="font-size: 0.95em; margin-bottom: 0; line-height: 1.6; color: #e0e0e0;">
-    <strong style="color: #ffffff;">Research Interests:</strong> Computer Architecture & Systems • HW-SW Co-Design • Domain Specific Accelerator
-  </p>
-</div>
+<style>
+  .jo-profile {
+    --jo-ink: #1f1b18;
+    --jo-muted: #625a52;
+    --jo-line: #e0d8cf;
+    --jo-card: #ffffff;
+    --jo-cardinal: #8c1515;
+    --jo-green: #1f6f5f;
+    --jo-gold: #8f641f;
+    color: var(--jo-ink);
+  }
 
-## About Me
+  .jo-profile a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
 
-I am a senior student at **KAIST** majoring in **Electrical Engineering** with a double major in **Computer Science**. I am currently conducting research at the **Systems Infrastructure and Architecture Research Lab (SITAR, Georgia Tech)**.
+  .jo-hero {
+    padding: 24px 0 28px;
+    border-bottom: 1px solid var(--jo-line);
+  }
 
-I believe we can unlock significant performance and energy efficiency improvements by deeply understanding how layers in the hardware-software stack interact and strategically co-designing across them. My research focuses on **hardware-software co-design**, **cross-layer optimization**, and **specialized accelerators**.
+  .jo-kicker {
+    margin: 0 0 10px;
+    color: var(--jo-cardinal);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
 
----
+  .jo-hero h1 {
+    margin: 0;
+    font-size: 3.2rem;
+    line-height: 0.95;
+    letter-spacing: 0;
+  }
 
-## Education
+  .jo-lead {
+    max-width: 860px;
+    margin: 22px 0 0;
+    color: var(--jo-ink);
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.22;
+  }
 
-<div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong>
-  <span>2019 - 2026 (expected)</span>
-</div>
+  .jo-copy {
+    max-width: 860px;
+    margin: 18px 0 0;
+    color: var(--jo-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
 
-*B.S. in Electrical Engineering (Primary), Computer Science (Double Major)*  
-GPA: 4.07/4.3 • Dean's List: Spring 2019, Spring 2024
+  .jo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
 
-<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 15px;">
-  <strong>Georgia Institute of Technology</strong>
-  <span>Spring 2025</span>
-</div>
+  .jo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--jo-line);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--jo-ink) !important;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none !important;
+  }
 
-*Exchange Student, School of Electrical and Computer Engineering*  
-GPA: 4.0/4.0
+  .jo-button.primary {
+    border-color: var(--jo-cardinal);
+    background: var(--jo-cardinal);
+    color: #fff !important;
+  }
 
----
+  .jo-section {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--jo-line);
+  }
 
-## Publications
+  .jo-section h2 {
+    margin: 0 0 18px;
+    font-size: 1.55rem;
+    line-height: 1.15;
+  }
 
-**[ISPASS 2025]** Characterizing Compute–Communication Overlap in GPU-Accelerated Distributed Deep Learning: Performance and Power Implications  
-Seonho Lee, **Jihwan Oh**, Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan  
-📄 [arXiv:2507.03114](https://arxiv.org/abs/2507.03114)
+  .jo-section-intro {
+    max-width: 820px;
+    margin: -6px 0 20px;
+    color: var(--jo-muted);
+    line-height: 1.7;
+  }
 
----
+  .jo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
 
-## Technical Skills
+  .jo-card {
+    padding: 18px;
+    border: 1px solid var(--jo-line);
+    border-radius: 8px;
+    background: var(--jo-card);
+  }
 
-**Programming & Scripting**: C/C++, Python, CUDA, Verilog, SystemVerilog, Assembly (x86)
+  .jo-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.02rem;
+    line-height: 1.3;
+  }
 
-**AI/ML Frameworks**: PyTorch, Megatron-LM, Megatron-DeepSpeed, Zeus Framework
+  .jo-card p {
+    margin: 0;
+    color: var(--jo-muted);
+    line-height: 1.62;
+  }
 
-**GPU & HPC Tools**: NVIDIA NCCL, CUTLASS, cuBLAS, Nsight Compute, Nsight Systems
+  .jo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 14px;
+  }
 
-**Systems & Platforms**: Linux, Docker, Git, ROS, Unreal Engine 4
+  .jo-tags span,
+  .jo-pub-meta span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #f3eee8;
+    color: #4d4037;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
 
----
+  .jo-news,
+  .jo-list {
+    display: grid;
+    gap: 12px;
+  }
 
-<div style="text-align: center; margin-top: 30px; padding: 15px; background-color: #f0f8ff; border-radius: 8px;">
-  <p>📧 <a href="mailto:jihwanoh1@gatech.edu">jihwanoh1@gatech.edu</a> | <a href="mailto:dhdudrby@kaist.ac.kr">dhdudrby@kaist.ac.kr</a> | 🔗 <a href="https://github.com/jihwan01">GitHub</a></p>
+  .jo-news-item,
+  .jo-timeline-item {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee8e1;
+  }
+
+  .jo-date {
+    color: var(--jo-gold);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .jo-news-item p,
+  .jo-timeline-item p,
+  .jo-timeline-item ul {
+    margin: 0;
+    color: var(--jo-muted);
+    line-height: 1.62;
+  }
+
+  .jo-publication {
+    padding: 18px 0;
+    border-bottom: 1px solid #eee8e1;
+  }
+
+  .jo-pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 10px;
+  }
+
+  .jo-publication h3 {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .jo-authors {
+    margin: 8px 0 0 !important;
+    color: #3b352f !important;
+    font-weight: 600;
+  }
+
+  .jo-role {
+    color: var(--jo-green) !important;
+    font-weight: 700;
+  }
+
+  .jo-timeline-item ul {
+    margin-top: 8px;
+    padding-left: 18px;
+  }
+
+  .jo-skill-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .jo-skill-cloud span {
+    padding: 6px 9px;
+    border: 1px solid var(--jo-line);
+    border-radius: 999px;
+    background: #fff;
+    color: #4d4037;
+    font-size: 0.82rem;
+    font-weight: 650;
+  }
+
+  .jo-contact {
+    padding: 20px;
+    border: 1px solid var(--jo-line);
+    border-radius: 8px;
+    background: #faf7f3;
+  }
+
+  .jo-contact p {
+    margin: 0 0 10px;
+    color: var(--jo-muted);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 760px) {
+    .jo-hero h1 {
+      font-size: 2.4rem;
+    }
+
+    .jo-lead {
+      font-size: 1.25rem;
+    }
+
+    .jo-grid,
+    .jo-news-item,
+    .jo-timeline-item {
+      grid-template-columns: 1fr;
+    }
+
+    .jo-news-item,
+    .jo-timeline-item {
+      gap: 4px;
+    }
+  }
+</style>
+
+<div class="jo-profile">
+  <section class="jo-hero">
+    <p class="jo-kicker">Stanford EE Ph.D. Student</p>
+    <h1>Jihwan Oh</h1>
+    <p class="jo-lead">
+      I work on cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing systems.
+    </p>
+    <p class="jo-copy">
+      I am beginning my Ph.D. in <a href="https://ee.stanford.edu/">Electrical Engineering at Stanford University</a>, advised in <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe Lab</a>. Previously, I conducted research with <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a> at <a href="https://www.gatech.edu/">Georgia Tech</a> and completed my B.S. at <a href="https://kaist.ac.kr/">KAIST</a>.
+    </p>
+    <p class="jo-copy">
+      This page is a research profile for collaborations, research internship conversations, and pointers to my recent work.
+    </p>
+    <div class="jo-actions">
+      <a class="jo-button primary" href="/files/CV_JihwanOh.pdf">CV</a>
+      <a class="jo-button" href="mailto:jihwanoh@stanford.edu">Email</a>
+      <a class="jo-button" href="https://github.com/jihwan01">GitHub</a>
+      <a class="jo-button" href="https://arxiv.org/abs/2507.03114">arXiv</a>
+    </div>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Updates</p>
+    <h2>News</h2>
+    <div class="jo-news">
+      <div class="jo-news-item">
+        <span class="jo-date">Jul 2026</span>
+        <p>First-author paper accepted to IEEE International Symposium on Workload Characterization (IISWC) 2026.</p>
+      </div>
+      <div class="jo-news-item">
+        <span class="jo-date">Sep 2026</span>
+        <p>Starting the Ph.D. program in Electrical Engineering at Stanford University and joining Prof. Thierry Tambe Lab.</p>
+      </div>
+      <div class="jo-news-item">
+        <span class="jo-date">Jun 2025</span>
+        <p>Selected as a full travel grant recipient for ISCA 2025 and the uArch Workshop in Tokyo.</p>
+      </div>
+      <div class="jo-news-item">
+        <span class="jo-date">May 2025</span>
+        <p>Presented work on compute-communication overlap at ISPASS 2025 in Ghent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Research Profile</p>
+    <h2>What I Work On</h2>
+    <p class="jo-section-intro">
+      My research asks how hardware, runtime systems, communication protocols, and ML workloads can be designed together instead of optimized in isolation.
+    </p>
+    <div class="jo-grid">
+      <div class="jo-card">
+        <h3>Cross-Layer Systems</h3>
+        <p>Profiling and redesigning the interaction between GPU kernels, communication libraries, runtimes, and hardware resources.</p>
+        <div class="jo-tags"><span>NCCL</span><span>CUDA</span><span>Nsight</span></div>
+      </div>
+      <div class="jo-card">
+        <h3>Hardware-Software Co-Design</h3>
+        <p>Building mechanisms that improve performance and energy efficiency across the full computing stack.</p>
+        <div class="jo-tags"><span>GPU systems</span><span>Memory systems</span><span>Pipelining</span></div>
+      </div>
+      <div class="jo-card">
+        <h3>Specialized Accelerators</h3>
+        <p>Studying accelerator architectures for data-intensive ML workloads, including PIM and domain-specific execution.</p>
+        <div class="jo-tags"><span>PIM</span><span>LLM inference</span><span>Architecture</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Selected Work</p>
+    <h2>Publications</h2>
+    <article class="jo-publication">
+      <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span></div>
+      <h3>Regular-Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
+      <p class="jo-authors"><strong>Jihwan Oh</strong>, Seokjin Go, Junkyum Kim, Jongse Park, Divya Mahajan</p>
+      <p class="jo-copy">A cross-layer study of compute-communication overlap overheads in GPU LLM workloads, exposing hardware-level costs that can be hidden at the software layer.</p>
+    </article>
+    <article class="jo-publication">
+      <div class="jo-pub-meta"><span>ISPASS 2025</span><span>Poster</span></div>
+      <h3>Characterizing Compute-Communication Overlap in GPU-Accelerated Distributed Deep Learning: Performance and Power Implications</h3>
+      <p class="jo-authors">Seonho Lee, <strong>Jihwan Oh</strong>, Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan</p>
+      <p class="jo-copy">Shows that aggressively maximizing overlap in distributed deep learning can degrade both execution time and power efficiency across parallelism configurations.</p>
+      <p class="jo-copy"><a href="https://arxiv.org/abs/2507.03114">arXiv:2507.03114</a></p>
+    </article>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Background</p>
+    <h2>Experience</h2>
+    <div class="jo-list">
+      <div class="jo-timeline-item">
+        <span class="jo-date">Jan 2025 - Aug 2026</span>
+        <div>
+          <h3><a href="https://www.divyamahajan.com/">Systems Infrastructure and Architecture Research Lab</a>, <a href="https://www.gatech.edu/">Georgia Tech</a></h3>
+          <p class="jo-role">Researcher, advised by <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a></p>
+          <ul>
+            <li>Characterized compute-communication overlap in large-scale distributed LLM training.</li>
+            <li>Led profiling work to identify hardware-level sources of overlap overhead.</li>
+            <li>Designed an NCCL cross-layer communication protocol using shared memory as a TMA-driven staging buffer.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jo-timeline-item">
+        <span class="jo-date">Sep 2024 - Dec 2024</span>
+        <div>
+          <h3>Computer Architecture and Systems Lab, <a href="https://kaist.ac.kr/">KAIST</a></h3>
+          <p class="jo-role">Undergraduate Researcher, advised by <a href="https://jongse-park.github.io/">Prof. Jongse Park</a></p>
+          <ul>
+            <li>Analyzed LLM inference on NeuPIMs and studied NPU-PIM load imbalance.</li>
+            <li>Explored redistribution strategies and quantization techniques for PIM architectures.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jo-timeline-item">
+        <span class="jo-date">Aug 2021 - May 2023</span>
+        <div>
+          <h3>Republic of Korea Air Force</h3>
+          <p class="jo-role">Software Developer</p>
+          <ul>
+            <li>Developed a VR flight-training system with Unreal Engine 4 and C++.</li>
+            <li>Presented the simulator as an Air Force representative at a national information and communication development conference.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Training</p>
+    <h2>Education</h2>
+    <div class="jo-grid">
+      <div class="jo-card">
+        <p class="jo-date">Sep 2026 -</p>
+        <h3><a href="https://ee.stanford.edu/">Stanford University</a></h3>
+        <p>Ph.D. Student in Electrical Engineering. Prof. Thierry Tambe Lab.</p>
+      </div>
+      <div class="jo-card">
+        <p class="jo-date">Feb 2019 - Feb 2026</p>
+        <h3><a href="https://kaist.ac.kr/">KAIST</a></h3>
+        <p>B.S. in Electrical Engineering, double major in School of Computing. GPA 4.07/4.3, Summa Cum Laude.</p>
+      </div>
+      <div class="jo-card">
+        <p class="jo-date">Jan 2025 - Jul 2025</p>
+        <h3><a href="https://www.gatech.edu/">Georgia Institute of Technology</a></h3>
+        <p>Exchange Program, School of Electrical and Computer Engineering. GPA 4.0/4.0.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Recognition</p>
+    <h2>Honors</h2>
+    <ul>
+      <li>Next-Generation Engineer Award: Highest Distinction, IPESK, 2025</li>
+      <li>uArch Mentoring Workshop Full Travel Grant, uArch @ ISCA 2025</li>
+      <li>Student Travel Grant, IEEE ISPASS 2025</li>
+      <li>Korea-U.S. Student Exchange Program Scholarship, KIAT, 2024</li>
+      <li>National Science and Technology Scholarship, Korea Government, 2021 - 2024</li>
+    </ul>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Tools</p>
+    <h2>Technical Skills</h2>
+    <div class="jo-skill-cloud">
+      <span>C/C++</span><span>Python</span><span>Rust</span><span>CUDA</span><span>SystemVerilog</span><span>Verilog</span><span>PyTorch</span><span>NCCL</span><span>CUTLASS</span><span>cuBLAS</span><span>Megatron-LM</span><span>Nsight Compute</span><span>Nsight Systems</span><span>ROS</span><span>Unreal Engine 4</span><span>Git</span>
+    </div>
+  </section>
+
+  <section class="jo-section">
+    <p class="jo-kicker">Contact</p>
+    <h2>Contact</h2>
+    <div class="jo-contact">
+      <p>Open to research conversations around efficient AI systems, architecture, and internship opportunities.</p>
+      <p><a href="mailto:jihwanoh@stanford.edu">jihwanoh@stanford.edu</a> | <a href="/files/CV_JihwanOh.pdf">CV</a> | <a href="https://github.com/jihwan01">GitHub</a></p>
+    </div>
+  </section>
 </div>
