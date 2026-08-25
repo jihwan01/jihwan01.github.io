@@ -2,7 +2,7 @@
 permalink: /
 title: "Jihwan Oh"
 excerpt: "Computer Architecture, Systems for ML, and Hardware-Software Co-Design"
-author_profile: true
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
@@ -218,22 +218,6 @@ redirect_from:
     padding-left: 18px;
   }
 
-  .jo-skill-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .jo-skill-cloud span {
-    padding: 6px 9px;
-    border: 1px solid var(--jo-line);
-    border-radius: 999px;
-    background: #fff;
-    color: #4d4037;
-    font-size: 0.82rem;
-    font-weight: 650;
-  }
-
   .jo-contact {
     padding: 20px;
     border: 1px solid var(--jo-line);
@@ -286,21 +270,21 @@ redirect_from:
       <a class="jo-button primary" href="/files/CV_JihwanOh.pdf">CV</a>
       <a class="jo-button" href="mailto:jihwanoh@stanford.edu">Email</a>
       <a class="jo-button" href="https://github.com/jihwan01">GitHub</a>
-      <a class="jo-button" href="https://arxiv.org/abs/2507.03114">arXiv</a>
+      <a class="jo-button" href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a>
     </div>
   </section>
 
-  <section class="jo-section">
+  <section class="jo-section" id="news">
     <p class="jo-kicker">Updates</p>
     <h2>News</h2>
     <div class="jo-news">
       <div class="jo-news-item">
-        <span class="jo-date">Jul 2026</span>
-        <p>First-author paper accepted to IEEE International Symposium on Workload Characterization (IISWC) 2026.</p>
-      </div>
-      <div class="jo-news-item">
         <span class="jo-date">Sep 2026</span>
         <p>Starting the Ph.D. program in Electrical Engineering at Stanford University and joining Prof. Thierry Tambe Lab.</p>
+      </div>
+      <div class="jo-news-item">
+        <span class="jo-date">Jul 2026</span>
+        <p>First-author paper accepted to IEEE International Symposium on Workload Characterization (IISWC) 2026.</p>
       </div>
       <div class="jo-news-item">
         <span class="jo-date">Jun 2025</span>
@@ -313,7 +297,7 @@ redirect_from:
     </div>
   </section>
 
-  <section class="jo-section">
+  <section class="jo-section" id="research">
     <p class="jo-kicker">Research Profile</p>
     <h2>What I Work On</h2>
     <p class="jo-section-intro">
@@ -338,7 +322,7 @@ redirect_from:
     </div>
   </section>
 
-  <section class="jo-section">
+  <section class="jo-section" id="publications">
     <p class="jo-kicker">Selected Work</p>
     <h2>Publications</h2>
     <article class="jo-publication">
@@ -356,7 +340,7 @@ redirect_from:
     </article>
   </section>
 
-  <section class="jo-section">
+  <section class="jo-section" id="experience">
     <p class="jo-kicker">Background</p>
     <h2>Experience</h2>
     <div class="jo-list">
@@ -397,29 +381,35 @@ redirect_from:
     </div>
   </section>
 
-  <section class="jo-section">
+  <section class="jo-section" id="education">
     <p class="jo-kicker">Training</p>
     <h2>Education</h2>
-    <div class="jo-grid">
-      <div class="jo-card">
-        <p class="jo-date">Sep 2026 -</p>
-        <h3><a href="https://ee.stanford.edu/">Stanford University</a></h3>
-        <p>Ph.D. Student in Electrical Engineering. Prof. Thierry Tambe Lab.</p>
+    <div class="jo-list">
+      <div class="jo-timeline-item">
+        <span class="jo-date">Sep 2026 -</span>
+        <div>
+          <h3><a href="https://ee.stanford.edu/">Stanford University</a></h3>
+          <p>Ph.D. in Electrical Engineering, advised in <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe Lab</a>.</p>
+        </div>
       </div>
-      <div class="jo-card">
-        <p class="jo-date">Feb 2019 - Feb 2026</p>
-        <h3><a href="https://kaist.ac.kr/">KAIST</a></h3>
-        <p>B.S. in Electrical Engineering, double major in School of Computing. GPA 4.07/4.3, Summa Cum Laude.</p>
+      <div class="jo-timeline-item">
+        <span class="jo-date">Feb 2019 - Feb 2026</span>
+        <div>
+          <h3><a href="https://kaist.ac.kr/">KAIST</a></h3>
+          <p>B.S. in Electrical Engineering, double major in School of Computing. GPA 4.07/4.3, Summa Cum Laude.</p>
+        </div>
       </div>
-      <div class="jo-card">
-        <p class="jo-date">Jan 2025 - Jul 2025</p>
-        <h3><a href="https://www.gatech.edu/">Georgia Institute of Technology</a></h3>
-        <p>Exchange Program, School of Electrical and Computer Engineering. GPA 4.0/4.0.</p>
+      <div class="jo-timeline-item">
+        <span class="jo-date">Jan 2025 - Jul 2025</span>
+        <div>
+          <h3><a href="https://www.gatech.edu/">Georgia Institute of Technology</a></h3>
+          <p>Exchange Program, School of Electrical and Computer Engineering. GPA 4.0/4.0.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="jo-section">
+  <section class="jo-section" id="honors">
     <p class="jo-kicker">Recognition</p>
     <h2>Honors</h2>
     <ul>
@@ -431,20 +421,12 @@ redirect_from:
     </ul>
   </section>
 
-  <section class="jo-section">
-    <p class="jo-kicker">Tools</p>
-    <h2>Technical Skills</h2>
-    <div class="jo-skill-cloud">
-      <span>C/C++</span><span>Python</span><span>Rust</span><span>CUDA</span><span>SystemVerilog</span><span>Verilog</span><span>PyTorch</span><span>NCCL</span><span>CUTLASS</span><span>cuBLAS</span><span>Megatron-LM</span><span>Nsight Compute</span><span>Nsight Systems</span><span>ROS</span><span>Unreal Engine 4</span><span>Git</span>
-    </div>
-  </section>
-
-  <section class="jo-section">
+  <section class="jo-section" id="contact">
     <p class="jo-kicker">Contact</p>
     <h2>Contact</h2>
     <div class="jo-contact">
       <p>Open to research conversations around efficient AI systems, architecture, and internship opportunities.</p>
-      <p><a href="mailto:jihwanoh@stanford.edu">jihwanoh@stanford.edu</a> | <a href="/files/CV_JihwanOh.pdf">CV</a> | <a href="https://github.com/jihwan01">GitHub</a></p>
+      <p><a href="mailto:jihwanoh@stanford.edu">jihwanoh@stanford.edu</a> | <a href="/files/CV_JihwanOh.pdf">CV</a> | <a href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a> | <a href="https://github.com/jihwan01">GitHub</a></p>
     </div>
   </section>
 </div>

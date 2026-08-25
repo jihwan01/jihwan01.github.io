@@ -2,17 +2,17 @@
 layout: archive
 title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
 <div style="text-align: center; margin-bottom: 20px;">
   <a href="/files/CV_JihwanOh.pdf" class="btn btn--primary" style="font-size: 1.1em; padding: 10px 20px; margin: 10px;" target="_blank">
-    📄 View PDF
+    View PDF
   </a>
   <a href="/files/CV_JihwanOh.pdf" class="btn btn--primary" style="font-size: 1.1em; padding: 10px 20px; margin: 10px;" download>
-    ⬇️ Download PDF
+    Download PDF
   </a>
 </div>
 
@@ -43,7 +43,7 @@ redirect_from:
 
 <div class="mobile-cv-notice">
   <p style="font-size: 1.1em; margin-bottom: 20px;">
-    📱 For the best mobile experience, please use the buttons above to view or download the PDF.
+    For the best mobile experience, please use the buttons above to view or download the PDF.
   </p>
   <a href="/files/CV_JihwanOh.pdf" class="btn btn--primary" style="font-size: 1.1em; padding: 12px 24px;" target="_blank">
     Open PDF in New Tab
