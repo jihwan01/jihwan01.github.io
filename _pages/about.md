@@ -9,6 +9,10 @@ redirect_from:
 ---
 
 <style>
+  .page__inner-wrap > header {
+    display: none;
+  }
+
   .jo-profile {
     --jo-ink: #1f1b18;
     --jo-muted: #625a52;
@@ -28,6 +32,22 @@ redirect_from:
   .jo-hero {
     padding: 24px 0 28px;
     border-bottom: 1px solid var(--jo-line);
+  }
+
+  .jo-hero-head {
+    display: grid;
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+  }
+
+  .jo-avatar {
+    width: 132px;
+    height: 132px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--jo-line);
+    background: #f7f2ed;
   }
 
   .jo-kicker {
@@ -236,6 +256,16 @@ redirect_from:
       font-size: 2.4rem;
     }
 
+    .jo-hero-head {
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .jo-avatar {
+      width: 86px;
+      height: 86px;
+    }
+
     .jo-lead {
       font-size: 1.25rem;
     }
@@ -255,8 +285,13 @@ redirect_from:
 
 <div class="jo-profile">
   <section class="jo-hero">
-    <p class="jo-kicker">Stanford EE Ph.D. Student</p>
-    <h1>Jihwan Oh</h1>
+    <div class="jo-hero-head">
+      <img class="jo-avatar" src="/images/jihwan_profile.jpeg" alt="Jihwan Oh">
+      <div>
+        <p class="jo-kicker">Stanford EE Ph.D. Student</p>
+        <h1>Jihwan Oh</h1>
+      </div>
+    </div>
     <p class="jo-lead">
       I work on cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing systems.
     </p>
