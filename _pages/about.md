@@ -533,7 +533,7 @@ redirect_from:
     <h2>Selected Publications</h2>
     <article class="jo-publication">
       <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span></div>
-      <h3>Regular-Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
+      <h3>Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
       <p class="jo-authors"><strong>Jihwan Oh</strong>, Seokjin Go, Junkyum Kim, Jongse Park, Divya Mahajan</p>
       <p class="jo-copy">A cross-layer study of compute-communication overlap overheads in GPU LLM workloads, exposing hardware-level costs that can be hidden at the software layer.</p>
     </article>
