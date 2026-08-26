@@ -69,26 +69,43 @@ redirect_from:
 
   .jo-hero-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(190px, 240px);
-    gap: 34px;
-    align-items: start;
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 42px;
+    align-items: center;
   }
 
   .jo-portrait {
     justify-self: end;
-    width: 100%;
-    max-width: 240px;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 50%, var(--jo-card) 0 67%, transparent 68%),
+      conic-gradient(from 150deg, var(--jo-cardinal), var(--jo-gold), var(--jo-green), var(--jo-cardinal));
+  }
+
+  .jo-portrait::after {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    border: 1px solid var(--jo-line);
+    pointer-events: none;
   }
 
   .jo-photo {
+    position: absolute;
+    inset: 18px;
     display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    border-radius: 8px;
+    width: calc(100% - 36px);
+    height: calc(100% - 36px);
+    border-radius: 50%;
     object-fit: cover;
+    object-position: center 27%;
     border: 1px solid var(--jo-line);
     background: var(--jo-avatar-bg);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
   }
 
   html[data-theme="dark"] .jo-photo {
@@ -410,7 +427,8 @@ redirect_from:
 
     .jo-portrait {
       justify-self: start;
-      width: 160px;
+      width: 170px;
+      height: 170px;
     }
 
     .jo-lead {
@@ -454,7 +472,7 @@ redirect_from:
         </div>
       </div>
       <div class="jo-portrait">
-        <img class="jo-photo" src="/images/jihwan_profile_crop.jpg" alt="Jihwan Oh">
+        <img class="jo-photo" src="/images/jihwan_profile.jpeg" alt="Jihwan Oh">
       </div>
     </div>
   </section>
