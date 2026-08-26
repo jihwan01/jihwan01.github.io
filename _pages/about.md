@@ -3,51 +3,96 @@ permalink: /
 title: "Jihwan Oh"
 excerpt: "Computer Architecture, Systems for ML, and Hardware-Software Co-Design"
 author_profile: false
+hide_title: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
 <style>
-  .page__inner-wrap > header {
-    display: none;
-  }
-
   .jo-profile {
-    --jo-ink: #1f1b18;
+    --jo-ink: var(--global-text-color);
     --jo-muted: #625a52;
-    --jo-line: #e0d8cf;
-    --jo-card: #ffffff;
+    --jo-line: var(--global-border-color);
+    --jo-rule: #eee8e1;
+    --jo-card: var(--global-bg-color);
+    --jo-soft: #faf7f3;
+    --jo-avatar-bg: #f7f2ed;
+    --jo-chip-bg: #f3eee8;
+    --jo-chip-text: #4d4037;
+    --jo-authors: #3b352f;
+    --jo-button-bg: var(--global-bg-color);
+    --jo-primary-text: #fff;
     --jo-cardinal: #8c1515;
     --jo-green: #1f6f5f;
     --jo-gold: #8f641f;
+    --jo-blue: #2f5d8c;
+    --jo-plum: #7a4d8f;
+    --jo-rust: #9a4d1f;
     color: var(--jo-ink);
   }
 
+  html[data-theme="dark"] .jo-profile {
+    --jo-muted: #f3f3f3;
+    --jo-line: rgba(255, 255, 255, 0.32);
+    --jo-rule: rgba(255, 255, 255, 0.18);
+    --jo-card: #505050;
+    --jo-soft: #505050;
+    --jo-avatar-bg: #555;
+    --jo-chip-bg: #5f5751;
+    --jo-chip-text: #fff;
+    --jo-authors: #fff;
+    --jo-button-bg: #505050;
+    --jo-cardinal: #ffb3b3;
+    --jo-green: #9de0d4;
+    --jo-gold: #f0c37a;
+    --jo-blue: #a8cbf0;
+    --jo-plum: #d7b6ef;
+    --jo-rust: #f2b78c;
+  }
+
   .jo-profile a {
+    color: var(--jo-cardinal);
+    font-weight: 650;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
 
+  .jo-profile a:hover {
+    color: var(--section-accent, var(--jo-cardinal));
+  }
+
   .jo-hero {
-    padding: 24px 0 28px;
+    padding: 30px 0 34px;
     border-bottom: 1px solid var(--jo-line);
   }
 
-  .jo-hero-head {
+  .jo-hero-layout {
     display: grid;
-    grid-template-columns: 132px minmax(0, 1fr);
-    gap: 24px;
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(190px, 240px);
+    gap: 34px;
+    align-items: start;
   }
 
-  .jo-avatar {
-    width: 132px;
-    height: 132px;
+  .jo-portrait {
+    justify-self: end;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .jo-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
     border-radius: 8px;
     object-fit: cover;
     border: 1px solid var(--jo-line);
-    background: #f7f2ed;
+    background: var(--jo-avatar-bg);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  html[data-theme="dark"] .jo-photo {
+    box-shadow: none;
   }
 
   .jo-kicker {
@@ -98,7 +143,7 @@ redirect_from:
     padding: 8px 14px;
     border: 1px solid var(--jo-line);
     border-radius: 6px;
-    background: #fff;
+    background: var(--jo-button-bg);
     color: var(--jo-ink) !important;
     font-size: 0.86rem;
     font-weight: 700;
@@ -108,18 +153,67 @@ redirect_from:
   .jo-button.primary {
     border-color: var(--jo-cardinal);
     background: var(--jo-cardinal);
-    color: #fff !important;
+    color: var(--jo-primary-text) !important;
   }
 
   .jo-section {
+    --section-accent: var(--jo-cardinal);
+    --section-chip-bg: var(--jo-chip-bg);
     padding: 28px 0;
     border-bottom: 1px solid var(--jo-line);
   }
 
+  .jo-section a {
+    color: var(--section-accent);
+  }
+
   .jo-section h2 {
     margin: 0 0 18px;
+    color: var(--section-accent);
     font-size: 1.55rem;
     line-height: 1.15;
+  }
+
+  .jo-section h2::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--section-accent);
+    vertical-align: 0.08em;
+  }
+
+  #news {
+    --section-accent: var(--jo-cardinal);
+    --section-chip-bg: color-mix(in srgb, var(--jo-cardinal) 12%, var(--jo-chip-bg));
+  }
+
+  #research {
+    --section-accent: var(--jo-green);
+    --section-chip-bg: color-mix(in srgb, var(--jo-green) 14%, var(--jo-chip-bg));
+  }
+
+  #publications {
+    --section-accent: var(--jo-blue);
+    --section-chip-bg: color-mix(in srgb, var(--jo-blue) 14%, var(--jo-chip-bg));
+  }
+
+  #experience {
+    --section-accent: var(--jo-rust);
+    --section-chip-bg: color-mix(in srgb, var(--jo-rust) 14%, var(--jo-chip-bg));
+  }
+
+  #education {
+    --section-accent: var(--jo-plum);
+    --section-chip-bg: color-mix(in srgb, var(--jo-plum) 14%, var(--jo-chip-bg));
+  }
+
+  #honors,
+  #contact {
+    --section-accent: var(--jo-gold);
+    --section-chip-bg: color-mix(in srgb, var(--jo-gold) 14%, var(--jo-chip-bg));
   }
 
   .jo-section-intro {
@@ -154,6 +248,59 @@ redirect_from:
     line-height: 1.62;
   }
 
+  .jo-education {
+    display: grid;
+    gap: 14px;
+  }
+
+  .jo-education-item {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid var(--jo-line);
+    border-radius: 8px;
+    background: var(--jo-card);
+  }
+
+  .jo-education-item h3 {
+    margin: 0 0 4px;
+    font-size: 1.08rem;
+    line-height: 1.3;
+  }
+
+  .jo-degree {
+    margin: 0;
+    color: var(--jo-ink);
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .jo-edu-meta {
+    margin: 6px 0 0;
+    color: var(--jo-muted);
+    line-height: 1.55;
+  }
+
+  .jo-edu-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+  }
+
+  .jo-edu-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: var(--section-chip-bg);
+    color: var(--jo-chip-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
   .jo-tags {
     display: flex;
     flex-wrap: wrap;
@@ -168,8 +315,8 @@ redirect_from:
     min-height: 26px;
     padding: 4px 8px;
     border-radius: 999px;
-    background: #f3eee8;
-    color: #4d4037;
+    background: var(--section-chip-bg);
+    color: var(--jo-chip-text);
     font-size: 0.75rem;
     font-weight: 700;
   }
@@ -186,7 +333,7 @@ redirect_from:
     grid-template-columns: 120px minmax(0, 1fr);
     gap: 18px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #eee8e1;
+    border-bottom: 1px solid var(--jo-rule);
   }
 
   .jo-date {
@@ -206,7 +353,7 @@ redirect_from:
 
   .jo-publication {
     padding: 18px 0;
-    border-bottom: 1px solid #eee8e1;
+    border-bottom: 1px solid var(--jo-rule);
   }
 
   .jo-pub-meta {
@@ -224,7 +371,7 @@ redirect_from:
 
   .jo-authors {
     margin: 8px 0 0 !important;
-    color: #3b352f !important;
+    color: var(--jo-authors) !important;
     font-weight: 600;
   }
 
@@ -242,7 +389,7 @@ redirect_from:
     padding: 20px;
     border: 1px solid var(--jo-line);
     border-radius: 8px;
-    background: #faf7f3;
+    background: var(--jo-soft);
   }
 
   .jo-contact p {
@@ -256,14 +403,14 @@ redirect_from:
       font-size: 2.4rem;
     }
 
-    .jo-hero-head {
-      grid-template-columns: 86px minmax(0, 1fr);
-      gap: 16px;
+    .jo-hero-layout {
+      grid-template-columns: 1fr;
+      gap: 22px;
     }
 
-    .jo-avatar {
-      width: 86px;
-      height: 86px;
+    .jo-portrait {
+      justify-self: start;
+      width: 160px;
     }
 
     .jo-lead {
@@ -271,6 +418,7 @@ redirect_from:
     }
 
     .jo-grid,
+    .jo-education-item,
     .jo-news-item,
     .jo-timeline-item {
       grid-template-columns: 1fr;
@@ -285,32 +433,33 @@ redirect_from:
 
 <div class="jo-profile">
   <section class="jo-hero">
-    <div class="jo-hero-head">
-      <img class="jo-avatar" src="/images/jihwan_profile.jpeg" alt="Jihwan Oh">
+    <div class="jo-hero-layout">
       <div>
         <p class="jo-kicker">Stanford EE Ph.D. Student</p>
         <h1>Jihwan Oh</h1>
+        <p class="jo-lead">
+          I work on cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing systems.
+        </p>
+        <p class="jo-copy">
+          I am beginning my Ph.D. in <a href="https://ee.stanford.edu/">Electrical Engineering at Stanford University</a>, advised in <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe Lab</a>. Previously, I conducted research with <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a> at <a href="https://www.gatech.edu/">Georgia Tech</a> and completed my B.S. at <a href="https://kaist.ac.kr/">KAIST</a>.
+        </p>
+        <p class="jo-copy">
+          This page is a research profile for collaborations, research internship conversations, and pointers to my recent work.
+        </p>
+        <div class="jo-actions">
+          <a class="jo-button primary" href="/files/CV_JihwanOh.pdf">CV</a>
+          <a class="jo-button" href="mailto:jihwanoh@stanford.edu">Email</a>
+          <a class="jo-button" href="https://github.com/jihwan01">GitHub</a>
+          <a class="jo-button" href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a>
+        </div>
       </div>
-    </div>
-    <p class="jo-lead">
-      I work on cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing systems.
-    </p>
-    <p class="jo-copy">
-      I am beginning my Ph.D. in <a href="https://ee.stanford.edu/">Electrical Engineering at Stanford University</a>, advised in <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe Lab</a>. Previously, I conducted research with <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a> at <a href="https://www.gatech.edu/">Georgia Tech</a> and completed my B.S. at <a href="https://kaist.ac.kr/">KAIST</a>.
-    </p>
-    <p class="jo-copy">
-      This page is a research profile for collaborations, research internship conversations, and pointers to my recent work.
-    </p>
-    <div class="jo-actions">
-      <a class="jo-button primary" href="/files/CV_JihwanOh.pdf">CV</a>
-      <a class="jo-button" href="mailto:jihwanoh@stanford.edu">Email</a>
-      <a class="jo-button" href="https://github.com/jihwan01">GitHub</a>
-      <a class="jo-button" href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a>
+      <div class="jo-portrait">
+        <img class="jo-photo" src="/images/jihwan_profile_crop.jpg" alt="Jihwan Oh">
+      </div>
     </div>
   </section>
 
   <section class="jo-section" id="news">
-    <p class="jo-kicker">Updates</p>
     <h2>News</h2>
     <div class="jo-news">
       <div class="jo-news-item">
@@ -333,8 +482,7 @@ redirect_from:
   </section>
 
   <section class="jo-section" id="research">
-    <p class="jo-kicker">Research Profile</p>
-    <h2>What I Work On</h2>
+    <h2>Research Interests</h2>
     <p class="jo-section-intro">
       My research asks how hardware, runtime systems, communication protocols, and ML workloads can be designed together instead of optimized in isolation.
     </p>
@@ -358,8 +506,7 @@ redirect_from:
   </section>
 
   <section class="jo-section" id="publications">
-    <p class="jo-kicker">Selected Work</p>
-    <h2>Publications</h2>
+    <h2>Selected Publications</h2>
     <article class="jo-publication">
       <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span></div>
       <h3>Regular-Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
@@ -376,7 +523,6 @@ redirect_from:
   </section>
 
   <section class="jo-section" id="experience">
-    <p class="jo-kicker">Background</p>
     <h2>Experience</h2>
     <div class="jo-list">
       <div class="jo-timeline-item">
@@ -417,36 +563,40 @@ redirect_from:
   </section>
 
   <section class="jo-section" id="education">
-    <p class="jo-kicker">Training</p>
     <h2>Education</h2>
-    <div class="jo-list">
-      <div class="jo-timeline-item">
+    <div class="jo-education">
+      <div class="jo-education-item">
         <span class="jo-date">Sep 2026 -</span>
         <div>
-          <h3><a href="https://ee.stanford.edu/">Stanford University</a></h3>
-          <p>Ph.D. in Electrical Engineering, advised in <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe Lab</a>.</p>
+          <h3>Stanford University</h3>
+          <p class="jo-degree">Ph.D. in Electrical Engineering</p>
+          <p class="jo-edu-meta">Advisor: Prof. Thierry Tambe Lab</p>
+          <div class="jo-edu-tags"><span>Ph.D.</span><span>Electrical Engineering</span><span>Stanford, CA</span></div>
         </div>
       </div>
-      <div class="jo-timeline-item">
+      <div class="jo-education-item">
         <span class="jo-date">Feb 2019 - Feb 2026</span>
         <div>
-          <h3><a href="https://kaist.ac.kr/">KAIST</a></h3>
-          <p>B.S. in Electrical Engineering, double major in School of Computing. GPA 4.07/4.3, Summa Cum Laude.</p>
+          <h3>KAIST</h3>
+          <p class="jo-degree">B.S. in Electrical Engineering</p>
+          <p class="jo-edu-meta">Double major in School of Computing. GPA 4.07/4.3.</p>
+          <div class="jo-edu-tags"><span>Summa Cum Laude</span><span>Dean's List</span><span>Daejeon, Korea</span></div>
         </div>
       </div>
-      <div class="jo-timeline-item">
+      <div class="jo-education-item">
         <span class="jo-date">Jan 2025 - Jul 2025</span>
         <div>
-          <h3><a href="https://www.gatech.edu/">Georgia Institute of Technology</a></h3>
-          <p>Exchange Program, School of Electrical and Computer Engineering. GPA 4.0/4.0.</p>
+          <h3>Georgia Institute of Technology</h3>
+          <p class="jo-degree">Exchange Program, School of Electrical and Computer Engineering</p>
+          <p class="jo-edu-meta">GPA 4.0/4.0.</p>
+          <div class="jo-edu-tags"><span>Exchange Student</span><span>ECE</span><span>Atlanta, GA</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="jo-section" id="honors">
-    <p class="jo-kicker">Recognition</p>
-    <h2>Honors</h2>
+    <h2>Honors & Awards</h2>
     <ul>
       <li>Next-Generation Engineer Award: Highest Distinction, IPESK, 2025</li>
       <li>uArch Mentoring Workshop Full Travel Grant, uArch @ ISCA 2025</li>
@@ -457,7 +607,6 @@ redirect_from:
   </section>
 
   <section class="jo-section" id="contact">
-    <p class="jo-kicker">Contact</p>
     <h2>Contact</h2>
     <div class="jo-contact">
       <p>Open to research conversations around efficient AI systems, architecture, and internship opportunities.</p>
