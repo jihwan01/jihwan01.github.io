@@ -63,22 +63,26 @@ redirect_from:
   }
 
   .jo-hero {
-    padding: 30px 0 34px;
+    padding: 28px 0 32px;
     border-bottom: 1px solid var(--jo-line);
   }
 
   .jo-hero-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 250px;
-    gap: 42px;
+    max-width: 920px;
+  }
+
+  .jo-identity {
+    display: flex;
     align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
   }
 
   .jo-portrait {
-    justify-self: end;
+    flex: 0 0 auto;
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 112px;
+    height: 112px;
     border-radius: 50%;
     background:
       radial-gradient(circle at 50% 50%, var(--jo-card) 0 67%, transparent 68%),
@@ -88,7 +92,7 @@ redirect_from:
   .jo-portrait::after {
     content: "";
     position: absolute;
-    inset: 14px;
+    inset: 7px;
     border-radius: 50%;
     border: 1px solid var(--jo-line);
     pointer-events: none;
@@ -96,10 +100,10 @@ redirect_from:
 
   .jo-photo {
     position: absolute;
-    inset: 18px;
+    inset: 9px;
     display: block;
-    width: calc(100% - 36px);
-    height: calc(100% - 36px);
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
     border-radius: 50%;
     object-fit: cover;
     object-position: center 27%;
@@ -112,13 +116,8 @@ redirect_from:
     box-shadow: none;
   }
 
-  .jo-kicker {
-    margin: 0 0 10px;
-    color: var(--jo-cardinal);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-transform: uppercase;
+  .jo-title-block {
+    min-width: 0;
   }
 
   .jo-hero h1 {
@@ -128,9 +127,17 @@ redirect_from:
     letter-spacing: 0;
   }
 
+  .jo-affiliation {
+    margin: 10px 0 0;
+    color: var(--jo-muted);
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
   .jo-lead {
-    max-width: 860px;
-    margin: 22px 0 0;
+    max-width: 900px;
+    margin: 0;
     color: var(--jo-ink);
     font-size: 1.55rem;
     font-weight: 700;
@@ -420,15 +427,15 @@ redirect_from:
       font-size: 2.4rem;
     }
 
-    .jo-hero-layout {
-      grid-template-columns: 1fr;
-      gap: 22px;
+    .jo-identity {
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
     }
 
     .jo-portrait {
-      justify-self: start;
-      width: 170px;
-      height: 170px;
+      width: 78px;
+      height: 78px;
     }
 
     .jo-lead {
@@ -452,27 +459,26 @@ redirect_from:
 <div class="jo-profile">
   <section class="jo-hero">
     <div class="jo-hero-layout">
-      <div>
-        <p class="jo-kicker">Stanford EE Ph.D. Student</p>
-        <h1>Jihwan Oh</h1>
-        <p class="jo-lead">
-          I work on cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing systems.
-        </p>
-        <p class="jo-copy">
-          I am beginning my Ph.D. in <a href="https://ee.stanford.edu/">Electrical Engineering at Stanford University</a>, advised in <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe Lab</a>. Previously, I conducted research with <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a> at <a href="https://www.gatech.edu/">Georgia Tech</a> and completed my B.S. at <a href="https://kaist.ac.kr/">KAIST</a>.
-        </p>
-        <p class="jo-copy">
-          This page is a research profile for collaborations, research internship conversations, and pointers to my recent work.
-        </p>
-        <div class="jo-actions">
-          <a class="jo-button primary" href="/files/CV_JihwanOh.pdf">CV</a>
-          <a class="jo-button" href="mailto:jihwanoh@stanford.edu">Email</a>
-          <a class="jo-button" href="https://github.com/jihwan01">GitHub</a>
-          <a class="jo-button" href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a>
+      <div class="jo-identity">
+        <div class="jo-portrait">
+          <img class="jo-photo" src="/images/jihwan_profile.jpeg" alt="Jihwan Oh">
+        </div>
+        <div class="jo-title-block">
+          <h1>Jihwan Oh</h1>
+          <p class="jo-affiliation">Ph.D. Student in Electrical Engineering, Stanford University</p>
         </div>
       </div>
-      <div class="jo-portrait">
-        <img class="jo-photo" src="/images/jihwan_profile.jpeg" alt="Jihwan Oh">
+      <p class="jo-lead">
+        I work on cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing systems.
+      </p>
+      <p class="jo-copy">
+        I am starting my Ph.D. in <a href="https://ee.stanford.edu/">Stanford EE</a> with <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe</a>. Previously, I worked with <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a> at <a href="https://www.gatech.edu/">Georgia Tech</a> and completed my B.S. at <a href="https://kaist.ac.kr/">KAIST</a>.
+      </p>
+      <div class="jo-actions">
+        <a class="jo-button primary" href="/files/CV_JihwanOh.pdf">CV</a>
+        <a class="jo-button" href="mailto:jihwanoh@stanford.edu">Email</a>
+        <a class="jo-button" href="https://github.com/jihwan01">GitHub</a>
+        <a class="jo-button" href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a>
       </div>
     </div>
   </section>
