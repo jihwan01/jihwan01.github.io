@@ -293,6 +293,12 @@ redirect_from:
     line-height: 1.3;
   }
 
+  .jo-location {
+    color: var(--jo-muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
   .jo-degree {
     margin: 0;
     color: var(--jo-ink);
@@ -592,28 +598,26 @@ redirect_from:
       <div class="jo-education-item">
         <span class="jo-date">Sep 2026 -</span>
         <div>
-          <h3>Stanford University</h3>
+          <h3>Stanford University <span class="jo-location">· Stanford, CA</span></h3>
           <p class="jo-degree">Ph.D. in Electrical Engineering</p>
-          <p class="jo-edu-meta">Advisor: Prof. Thierry Tambe Lab</p>
-          <div class="jo-edu-tags"><span>Ph.D.</span><span>Electrical Engineering</span><span>Stanford, CA</span></div>
+          <p class="jo-edu-meta">Advisor: Prof. Thierry Tambe</p>
         </div>
       </div>
       <div class="jo-education-item">
         <span class="jo-date">Feb 2019 - Feb 2026</span>
         <div>
-          <h3>KAIST</h3>
-          <p class="jo-degree">B.S. in Electrical Engineering</p>
-          <p class="jo-edu-meta">Double major in the School of Computing. GPA: 4.07/4.3. Graduated summa cum laude and named to the Dean's List.</p>
-          <div class="jo-edu-tags"><span>B.S.</span><span>Electrical Engineering &amp; Computer Science</span><span>Daejeon, Korea</span></div>
+          <h3>KAIST <span class="jo-location">· Daejeon, Korea</span></h3>
+          <p class="jo-degree">B.S. in Electrical Engineering; Double Major in Computer Science</p>
+          <p class="jo-edu-meta">GPA: 4.07/4.3.</p>
+          <div class="jo-edu-tags"><span>Summa Cum Laude</span><span>Dean's List · Spring 2019, Spring 2024</span></div>
         </div>
       </div>
       <div class="jo-education-item">
         <span class="jo-date">Jan 2025 - Jul 2025</span>
         <div>
-          <h3>Georgia Institute of Technology</h3>
+          <h3>Georgia Institute of Technology <span class="jo-location">· Atlanta, GA</span></h3>
           <p class="jo-degree">Exchange Program, School of Electrical and Computer Engineering</p>
-          <p class="jo-edu-meta">GPA 4.0/4.0.</p>
-          <div class="jo-edu-tags"><span>Exchange Program</span><span>Electrical &amp; Computer Engineering</span><span>Atlanta, GA</span></div>
+          <p class="jo-edu-meta">GPA: 4.0/4.0.</p>
         </div>
       </div>
     </div>
