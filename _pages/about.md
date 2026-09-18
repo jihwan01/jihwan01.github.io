@@ -492,7 +492,7 @@ redirect_from:
       </div>
       <div class="jo-news-item">
         <span class="jo-date">Jul 2026</span>
-        <p>First-author paper accepted to IEEE International Symposium on Workload Characterization (IISWC) 2026.</p>
+        <p>First-author paper accepted to IEEE International Symposium on Workload Characterization (IISWC) 2026 and selected as a Best Paper Finalist.</p>
       </div>
       <div class="jo-news-item">
         <span class="jo-date">Jun 2025</span>
@@ -532,7 +532,7 @@ redirect_from:
   <section class="jo-section" id="publications">
     <h2>Selected Publications</h2>
     <article class="jo-publication">
-      <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span></div>
+      <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span><span>Best Paper Finalist</span></div>
       <h3>Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
       <p class="jo-authors"><strong>Jihwan Oh</strong>, Seokjin Go, Junkyum Kim, Jongse Park, Divya Mahajan</p>
       <p class="jo-copy">A cross-layer study of compute-communication overlap overheads in GPU LLM workloads, exposing hardware-level costs that can be hidden at the software layer.</p>
@@ -622,7 +622,7 @@ redirect_from:
   <section class="jo-section" id="honors">
     <h2>Honors & Awards</h2>
     <ul>
-      <li>Next-Generation Engineer Award: Highest Distinction, IPESK, 2025</li>
+      <li>Best Paper Finalist, IEEE IISWC 2026</li><li>Next-Generation Engineer Award: Highest Distinction, IPESK, 2025</li>
       <li>uArch Mentoring Workshop Full Travel Grant, uArch @ ISCA 2025</li>
       <li>Student Travel Grant, IEEE ISPASS 2025</li>
       <li>Korea-U.S. Student Exchange Program Scholarship, KIAT, 2024</li>
