@@ -1,0 +1,350 @@
+\documentclass[11pt, a4paper]{article}
+
+% Helpful packages
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage[cjk]{kotex}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{relsize}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+
+\fontfamily{georgia}\selectfont
+
+% Global formatting tweaks
+\pagestyle{empty}
+\geometry{margin=0.5in}
+\setlength\parindent{0pt}
+\setlist{nosep}
+\renewcommand\labelitemi{--}
+
+% New commands
+\newcommand{\name}[1]{
+    \begin{center}
+    \section*{\huge #1}
+    \end{center}
+}
+
+\newcommand{\topinfo}[1]{
+    \begin{center}
+    \vspace{-0.2cm}#1
+    \vspace{-0.1cm}
+    \end{center}
+}
+
+\newcommand{\resumesection}[1]{
+    \vspace{-0.35cm}
+    \section*{#1}
+    \vspace{-0.25cm}
+    \hrule\vspace{0.2cm}
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdfborder={0 0 1},
+}
+
+\definecolor{darknavy}{RGB}{0,45,140}
+\definecolor{deepnavy}{RGB}{0,25,100}
+
+
+\begin{document}
+
+\name{Jihwan Oh}
+
+\onehalfspacing
+\topinfo{Stanford University, Stanford, CA, USA}
+
+\onehalfspacing
+\topinfo{
+\href{mailto:jihwanoh@stanford.edu}{jihwanoh@stanford.edu}
+\; | \;
+\href{https://www.linkedin.com/in/jihwan-oh-21a772305}{
+\underline{\textcolor{blue}{LinkedIn}}}
+\; | \;
+\href{https://jihwan01.github.io/}{
+\underline{\textcolor{blue}{jihwan01.github.io}} (Website)}
+\; | \;
+\href{https://github.com/jihwan01}{
+\underline{\textcolor{blue}{GitHub}}}
+}
+
+\setstretch{1.178}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{RESEARCH INTERESTS}
+
+\begin{itemize}[leftmargin=1.2em]
+    \item Cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing
+    \item Computer Architecture, Specialized Accelerators, and Systems for ML
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{EDUCATION}
+
+\begin{itemize}[leftmargin=1.2em]
+    \item \textbf{Stanford University}
+    \hfill Sep.\ 2026 --\\[-0.2em]
+    {\smaller[0.6] Ph.D. Student in Electrical Engineering; Advisor: Prof.\ Thierry Tambe}
+\end{itemize}
+
+\begin{itemize}[leftmargin=1.2em]
+    \item \textbf{Korea Advanced Institute of Science and Technology (KAIST)}
+    \hfill Feb.\ 2019 -- Feb.\ 2026\\[-0.2em]
+    {\smaller[0.6] B.S. in School of Electrical Engineering (Primary Major), School of Computing (Double Major)}\\[-0.2em]
+    {\smaller[0.6] GPA: 4.07/4.3, \textit{Summa Cum Laude}; Dean's List: Spring 2019, Spring 2024}
+\end{itemize}
+
+\begin{itemize}[leftmargin=1.2em]
+    \item \textbf{Georgia Institute of Technology}
+    \hfill Jan.\ 2025 -- Jul.\ 2025\\[-0.2em]
+    {\smaller[0.6] Exchange Program, School of Electrical and Computer Engineering; GPA: 4.0/4.0}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{PUBLICATIONS}
+
+% ----- IISWC 2026 -----
+\noindent
+\begin{minipage}[t]{0.85\textwidth}
+\textbf{Compute-Communication Overlap Is Not Free: A Cross-Layer\\
+Characterization in GPU LLM Workloads}
+\end{minipage}%
+\begin{minipage}[t]{0.15\textwidth}
+\raggedleft Sep.\ 2026
+\end{minipage}\\[-0.3em]
+
+{\smaller[0.6]
+\underline{\textbf{\textit{Jihwan Oh}}},
+Seokjin Go, Junkyum Kim, Jongse Park, Divya Mahajan
+}
+
+{\smaller[0.6]
+\textit{Accepted to IEEE International Symposium on Workload Characterization (IISWC) 2026}; \textbf{Best Paper Finalist}
+}
+
+\vspace{0.1cm}
+
+
+% ----- ISPASS 2025 -----
+\noindent
+\parbox[t]{0.88\textwidth}{%
+\textbf{Characterizing Compute-Communication Overlap in GPU-Accelerated\\
+Distributed Deep Learning: Performance and Power Implications}
+}%
+\hfill
+\parbox[t]{0.10\textwidth}{%
+\raggedleft May.\ 2025
+}\\[-0.3em]
+
+{\smaller[0.6]
+Seonho Lee,
+\underline{\textbf{\textit{Jihwan Oh}}},
+Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
+}
+
+{\smaller[0.6]
+\textit{Poster presented at ISPASS 2025},
+\href{https://arxiv.org/abs/2507.03114}{arXiv:2507.03114}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{RESEARCH EXPERIENCE}
+
+\textbf{Systems Infrastructure and Architecture Research Lab, Georgia Tech}
+\hfill Jan.\ 2025 -- Aug.\ 2026
+
+\begin{description}[wide=0pt]
+    \item \textit{Researcher (Advisor: Prof.\ Divya Mahajan)}
+\end{description}
+
+\begin{itemize}[leftmargin=2em]
+
+    \item Characterized compute-communication overlap in large-scale distributed LLM training and showed that the widely held assumption ``maximizing overlap is always beneficial'' breaks down, with aggressive overlap degrading both execution time and power efficiency across parallelism configurations. Published and presented as a poster at ISPASS 2025.
+
+    \item Led a project to identify the hardware-level causes of compute-communication overlap overheads that remained hidden at the software layer through profiling and analysis.
+
+    \item Designed a new NCCL cross-layer communication protocol that repurposes unused shared memory as a TMA-driven staging buffer to enable internal pipelining, achieving comparable or higher bandwidth with roughly 50\% fewer SMs in microbenchmarks.
+
+\end{itemize}
+
+\vspace{0.18cm}
+
+\textbf{Computer Architecture and Systems Lab, KAIST}
+\hfill Sep.\ 2024 -- Dec.\ 2024
+
+\begin{description}[wide=0pt]
+    \item \textit{Undergraduate Researcher (Advisor: Prof.\ Jongse Park)}
+\end{description}
+
+\begin{itemize}[leftmargin=2em]
+
+    \item Analyzed LLM inference on \textit{NeuPIMs} (ASPLOS 2024) and found that FFN compute grows quadratically with hidden size, outpacing other operations and causing severe NPU-PIM load imbalance that limits model-size scalability. Designed a redistribution strategy that balances FFN execution across NPU and PIM, improving utilization and end-to-end performance.
+
+    \item Supported research on applying quantization techniques to PIM architectures by surveying state-of-the-art methods and benchmarking accuracy across multiple models.
+
+\end{itemize}
+
+\vspace{0.18cm}
+
+\textbf{Urban Robotics Lab, KAIST}
+\hfill Feb.\ 2024 -- Jun.\ 2024
+
+\begin{description}[wide=0pt]
+    \item \textit{Undergraduate Researcher (Advisor: Prof.\ Hyun Myung)}
+\end{description}
+
+\begin{itemize}[leftmargin=2em]
+    \item Implemented SLAM algorithms and ROS-based motion planning systems for mobile robotics.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{TEACHING \& INDUSTRY EXPERIENCE}
+
+\textbf{CS.10001: Introduction to Programming, KAIST}, Teaching Assistant
+\hfill Sep.\ 2025 -- Dec.\ 2025
+
+\vspace{0.05cm}
+
+\textbf{Yulmae Academy}, Programming Instructor
+\hfill Dec.\ 2023 -- Dec.\ 2024
+
+\begin{itemize}[leftmargin=1.2em]
+    \item Taught C, Python, and introductory machine learning to science high school students.
+\end{itemize}
+
+\vspace{0.05cm}
+
+\textbf{CS.93000: Immersion Camp (Coding Camp), KAIST}, Teaching Assistant
+\hfill Oct.\ 2023 -- Feb.\ 2024
+
+\vspace{0.05cm}
+
+\textbf{Republic of Korea Air Force}, Software Developer
+\hfill Aug.\ 2021 -- May.\ 2023
+
+\begin{itemize}[leftmargin=1.2em]
+
+    \item Developed and refined a VR flight-training system using Unreal Engine 4 and C++, integrating pilot feedback and Git-based collaboration to enhance realism and training effectiveness.
+
+    \item Selected to present the simulator as the Air Force representative at the 2022 ROKAF Information \& Communication Development Conference.
+
+    \item Selected to serve as a counseling officer supporting soldier adaptation, dormitory operations, and mental-health guidance.
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{ACADEMIC ACTIVITIES}
+
+\textbf{Paper Presenter}, IISWC 2026 -- Boulder, CO, USA
+\hfill Sep.\ 2026
+
+\begin{itemize}[leftmargin=1.2em]
+    \item Presenting the first-author paper ``Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads''.
+\end{itemize}
+
+\textbf{Poster Presentation}, ISPASS 2025 -- Ghent, Belgium
+\hfill May.\ 2025
+
+\begin{itemize}[leftmargin=1.2em]
+    \item Presented poster on ``Characterizing Compute-Communication Overlap in GPU-Accelerated Distributed Deep Learning''.
+\end{itemize}
+
+\textbf{Attendee}, ISCA 2025 and uArch Workshop -- Tokyo, Japan
+\hfill Jun.\ 2025
+
+\begin{itemize}[leftmargin=1.2em]
+    \item Selected as a full travel grant recipient to attend ISCA 2025 and participate in the uArch Workshop.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{AWARDS \& SCHOLARSHIPS}
+
+\begin{itemize}[leftmargin=1.2em]
+
+    \item \textbf{Stanford Thrive Fellow}, Stanford University
+    \hfill 2026
+
+    \vspace{0.03cm}
+
+    \item \textbf{Best Paper Finalist}, IEEE IISWC 2026
+    \hfill 2026
+
+    \vspace{0.03cm}
+
+    \item \textbf{Next-Generation Engineer Award: Highest Distinction}
+    \hfill 2025\\
+    Institute for Promotion of Engineering and Science of Korea, IPESK\\
+    Awarded the top distinction as the single highest-ranked recipient in the department.
+
+    \vspace{0.03cm}
+
+    \item \textbf{uArch Mentoring Workshop Full Travel Grant}, uArch @ ISCA 2025
+    \hfill 2025\\
+    Awarded a fully funded travel grant for both the uArch workshop and ISCA 2025.
+
+    \vspace{0.03cm}
+
+    \item \textbf{Student Travel Grant}, IEEE ISPASS 2025
+    \hfill 2025
+
+    \vspace{0.05cm}
+
+    \item \textbf{Dean's List}, School of Electrical Engineering, KAIST
+    \hfill 2024
+
+    \vspace{0.03cm}
+
+    \item \textbf{Korea-U.S. Student Exchange Program Scholarship}
+    \hfill 2024\\
+    Korea Institute for Advancement of Technology, KIAT
+
+    \vspace{0.05cm}
+
+    \item \textbf{National Science and Technology Scholarship}, Korea Government
+    \hfill 2021 -- 2024
+
+    \vspace{0.03cm}
+
+    \item \textbf{Dean's List}, Freshman Division, KAIST
+    \hfill 2019
+
+    \vspace{0.05cm}
+
+    \item \textbf{Minister of Education Award}, Ministry of Education (STEAM R\&E Program)
+    \hfill 2018
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumesection{TECHNICAL SKILLS}
+
+\begin{itemize}[leftmargin=1.2em]
+
+    \item \textbf{Programming Languages:}
+    C/C++, Python, Rust, SystemVerilog, Verilog
+
+    \vspace{0.05cm}
+
+    \item \textbf{Libraries and Tools:}
+    CUDA, PyTorch, NCCL, CUTLASS, cuBLAS;
+    Megatron-LM, Megatron-DeepSpeed;
+    Nsight Compute, Nsight Systems;
+    ROS, Unreal Engine 4; Git
+
+\end{itemize}
+
+\end{document}
