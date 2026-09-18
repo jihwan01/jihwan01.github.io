@@ -530,7 +530,7 @@ redirect_from:
   </section>
 
   <section class="jo-section" id="publications">
-    <h2>Selected Publications</h2>
+    <h2>Publications</h2>
     <article class="jo-publication">
       <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span><span>Best Paper Finalist</span></div>
       <h3>Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
@@ -603,8 +603,8 @@ redirect_from:
         <div>
           <h3>KAIST</h3>
           <p class="jo-degree">B.S. in Electrical Engineering</p>
-          <p class="jo-edu-meta">Double major in School of Computing. GPA 4.07/4.3.</p>
-          <div class="jo-edu-tags"><span>Summa Cum Laude</span><span>Dean's List</span><span>Daejeon, Korea</span></div>
+          <p class="jo-edu-meta">Double major in the School of Computing. GPA: 4.07/4.3. Graduated summa cum laude and named to the Dean's List.</p>
+          <div class="jo-edu-tags"><span>B.S.</span><span>Electrical Engineering &amp; Computer Science</span><span>Daejeon, Korea</span></div>
         </div>
       </div>
       <div class="jo-education-item">
@@ -613,7 +613,7 @@ redirect_from:
           <h3>Georgia Institute of Technology</h3>
           <p class="jo-degree">Exchange Program, School of Electrical and Computer Engineering</p>
           <p class="jo-edu-meta">GPA 4.0/4.0.</p>
-          <div class="jo-edu-tags"><span>Exchange Student</span><span>ECE</span><span>Atlanta, GA</span></div>
+          <div class="jo-edu-tags"><span>Exchange Program</span><span>Electrical &amp; Computer Engineering</span><span>Atlanta, GA</span></div>
         </div>
       </div>
     </div>
