@@ -622,7 +622,8 @@ redirect_from:
   <section class="jo-section" id="honors">
     <h2>Honors & Awards</h2>
     <ul>
-      <li>Best Paper Finalist, IEEE IISWC 2026</li><li>Next-Generation Engineer Award: Highest Distinction, IPESK, 2025</li>
+      <li>Stanford Thrive Fellow, Stanford University, 2026</li>
+    <li>Best Paper Finalist, IEEE IISWC 2026</li><li>Next-Generation Engineer Award: Highest Distinction, IPESK, 2025</li>
       <li>uArch Mentoring Workshop Full Travel Grant, uArch @ ISCA 2025</li>
       <li>Student Travel Grant, IEEE ISPASS 2025</li>
       <li>Korea-U.S. Student Exchange Program Scholarship, KIAT, 2024</li>
