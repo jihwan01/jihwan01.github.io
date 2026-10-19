@@ -81,10 +81,8 @@
 \resumesection{RESEARCH INTERESTS}
 
 \begin{itemize}[leftmargin=1.2em]
-    \item Cross-layer optimization and hardware-software co-design for energy-efficient, high-performance computing
-    \item Computer Architecture, Specialized Accelerators, and Systems for ML
+    \item Cross-layer optimization, hardware--software co-design, and computer architecture for efficient ML systems and accelerators.
 \end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{EDUCATION}
@@ -160,6 +158,19 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{RESEARCH EXPERIENCE}
 
+\textbf{Stanford University, Electrical Engineering}
+\hfill Sep.\ 2026 -- Present
+
+\begin{description}[wide=0pt]
+    \item \textit{Ph.D. Researcher (Advisor: Prof.\ Thierry Tambe)}
+\end{description}
+
+\begin{itemize}[leftmargin=2em]
+    \item Investigating quantization strategies and their performance implications for efficient ML workloads.
+\end{itemize}
+
+\vspace{0.18cm}
+
 \textbf{Systems Infrastructure and Architecture Research Lab, Georgia Tech}
 \hfill Jan.\ 2025 -- Aug.\ 2026
 
@@ -168,13 +179,8 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 \end{description}
 
 \begin{itemize}[leftmargin=2em]
-
-    \item Characterized compute-communication overlap in large-scale distributed LLM training and showed that the widely held assumption ``maximizing overlap is always beneficial'' breaks down, with aggressive overlap degrading both execution time and power efficiency across parallelism configurations. Published and presented as a poster at ISPASS 2025.
-
-    \item Led a project to identify the hardware-level causes of compute-communication overlap overheads that remained hidden at the software layer through profiling and analysis.
-
-    \item Designed a new NCCL cross-layer communication protocol that repurposes unused shared memory as a TMA-driven staging buffer to enable internal pipelining, achieving comparable or higher bandwidth with roughly 50\% fewer SMs in microbenchmarks.
-
+    \item Used GPU profiling to characterize compute--communication overlap in distributed LLM training, identifying hardware-level overheads that can make aggressive overlap degrade performance and power efficiency.
+    \item Designed a TMA-driven NCCL communication protocol that stages data in otherwise unused shared memory, achieving comparable or higher bandwidth with roughly 50\% fewer SMs in microbenchmarks.
 \end{itemize}
 
 \vspace{0.18cm}
@@ -187,93 +193,32 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 \end{description}
 
 \begin{itemize}[leftmargin=2em]
-
-    \item Analyzed LLM inference on \textit{NeuPIMs} (ASPLOS 2024) and found that FFN compute grows quadratically with hidden size, outpacing other operations and causing severe NPU-PIM load imbalance that limits model-size scalability. Designed a redistribution strategy that balances FFN execution across NPU and PIM, improving utilization and end-to-end performance.
-
-    \item Supported research on applying quantization techniques to PIM architectures by surveying state-of-the-art methods and benchmarking accuracy across multiple models.
-
+    \item Analyzed NPU--PIM load imbalance during LLM inference on \textit{NeuPIMs} and designed FFN workload redistribution to improve utilization and end-to-end performance.
+    \item Surveyed quantization methods for PIM architectures and benchmarked model accuracy across multiple models.
 \end{itemize}
-
-\vspace{0.18cm}
-
-\textbf{Urban Robotics Lab, KAIST}
-\hfill Feb.\ 2024 -- Jun.\ 2024
-
-\begin{description}[wide=0pt]
-    \item \textit{Undergraduate Researcher (Advisor: Prof.\ Hyun Myung)}
-\end{description}
-
-\begin{itemize}[leftmargin=2em]
-    \item Implemented SLAM algorithms and ROS-based motion planning systems for mobile robotics.
-\end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resumesection{TEACHING \& INDUSTRY EXPERIENCE}
+\resumesection{ADDITIONAL EXPERIENCE}
 
-\textbf{CS.10001: Introduction to Programming, KAIST}, Teaching Assistant
-\hfill Sep.\ 2025 -- Dec.\ 2025
-
-\vspace{0.05cm}
-
-\textbf{Yulmae Academy}, Programming Instructor
-\hfill Dec.\ 2023 -- Dec.\ 2024
+\textbf{Teaching Assistant}, KAIST
 
 \begin{itemize}[leftmargin=1.2em]
-    \item Taught C, Python, and introductory machine learning to science high school students.
+    \item Introduction to Programming (Fall 2025); Immersion Camp (Oct.\ 2023 -- Feb.\ 2024).
 \end{itemize}
 
 \vspace{0.05cm}
 
-\textbf{CS.93000: Immersion Camp (Coding Camp), KAIST}, Teaching Assistant
-\hfill Oct.\ 2023 -- Feb.\ 2024
-
-\vspace{0.05cm}
-
-\textbf{Republic of Korea Air Force}, Software Developer
+\textbf{Software Developer}, Republic of Korea Air Force
 \hfill Aug.\ 2021 -- May.\ 2023
 
 \begin{itemize}[leftmargin=1.2em]
-
-    \item Developed and refined a VR flight-training system using Unreal Engine 4 and C++, integrating pilot feedback and Git-based collaboration to enhance realism and training effectiveness.
-
-    \item Selected to present the simulator as the Air Force representative at the 2022 ROKAF Information \& Communication Development Conference.
-
-    \item Selected to serve as a counseling officer supporting soldier adaptation, dormitory operations, and mental-health guidance.
-
+    \item Developed a VR flight-training simulator in Unreal Engine 4 and C++; selected to present it at the 2022 ROKAF Information \& Communication Development Conference.
 \end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resumesection{ACADEMIC ACTIVITIES}
-
-\textbf{Paper Presenter}, IISWC 2026 -- Boulder, CO, USA
-\hfill Sep.\ 2026
-
-\begin{itemize}[leftmargin=1.2em]
-    \item Presented the first-author paper ``Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads''.
-\end{itemize}
-
-\textbf{Poster Presentation}, ISPASS 2025 -- Ghent, Belgium
-\hfill May.\ 2025
-
-\begin{itemize}[leftmargin=1.2em]
-    \item Presented poster on ``Characterizing Compute-Communication Overlap in GPU-Accelerated Distributed Deep Learning''.
-\end{itemize}
-
-\textbf{Attendee}, ISCA 2025 and uArch Workshop -- Tokyo, Japan
-\hfill Jun.\ 2025
-
-\begin{itemize}[leftmargin=1.2em]
-    \item Selected as a full travel grant recipient to attend ISCA 2025 and participate in the uArch Workshop.
-\end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{AWARDS \& SCHOLARSHIPS}
 
 \begin{itemize}[leftmargin=1.2em]
-
     \item \textbf{Stanford Thrive Fellow}, Stanford University
     \hfill 2026
 
@@ -284,67 +229,31 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 
     \vspace{0.03cm}
 
-    \item \textbf{Next-Generation Engineer Award: Highest Distinction}
+    \item \textbf{Next-Generation Engineer Award: Highest Distinction}, IPESK
     \hfill 2025\\
-    Institute for Promotion of Engineering and Science of Korea, IPESK\\
     Awarded the top distinction as the single highest-ranked recipient in the department.
 
     \vspace{0.03cm}
 
     \item \textbf{uArch Mentoring Workshop Full Travel Grant}, uArch @ ISCA 2025
-    \hfill 2025\\
-    Awarded a fully funded travel grant for both the uArch workshop and ISCA 2025.
-
-    \vspace{0.03cm}
-
-    \item \textbf{Student Travel Grant}, IEEE ISPASS 2025
     \hfill 2025
 
-    \vspace{0.05cm}
-
-    \item \textbf{Dean's List}, School of Electrical Engineering, KAIST
-    \hfill 2024
-
     \vspace{0.03cm}
-
-    \item \textbf{Korea-U.S. Student Exchange Program Scholarship}
-    \hfill 2024\\
-    Korea Institute for Advancement of Technology, KIAT
-
-    \vspace{0.05cm}
 
     \item \textbf{National Science and Technology Scholarship}, Korea Government
     \hfill 2021 -- 2024
-
-    \vspace{0.03cm}
-
-    \item \textbf{Dean's List}, Freshman Division, KAIST
-    \hfill 2019
-
-    \vspace{0.05cm}
-
-    \item \textbf{Minister of Education Award}, Ministry of Education (STEAM R\&E Program)
-    \hfill 2018
-
 \end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{TECHNICAL SKILLS}
 
 \begin{itemize}[leftmargin=1.2em]
-
-    \item \textbf{Programming Languages:}
-    C/C++, Python, Rust, SystemVerilog, Verilog
+    \item \textbf{Programming:} C/C++, Python, Rust, SystemVerilog
 
     \vspace{0.05cm}
 
-    \item \textbf{Libraries and Tools:}
-    CUDA, PyTorch, NCCL, CUTLASS, cuBLAS;
-    Megatron-LM, Megatron-DeepSpeed;
-    Nsight Compute, Nsight Systems;
-    ROS, Unreal Engine 4; Git
-
+    \item \textbf{ML/GPU Systems:} CUDA, PyTorch, NCCL, CUTLASS, cuBLAS, Megatron-LM, Megatron-DeepSpeed, Nsight Compute, Nsight Systems
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
