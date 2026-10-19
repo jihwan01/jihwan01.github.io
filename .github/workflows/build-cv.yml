@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-cv-master
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,15 +30,43 @@ jobs:
           latexmk_use_xelatex: true
 
       - name: Publish PDF
+        shell: bash
         run: |
-          mkdir -p files
-          cp cv/main.pdf files/CV_JihwanOh.pdf
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add files/CV_JihwanOh.pdf
-          if git diff --cached --quiet; then
-            echo "CV PDF is already current."
-          else
-            git commit -m "Update generated CV PDF"
-            git push
-          fi
+          set -euo pipefail
+          generated_pdf="$RUNNER_TEMP/CV_JihwanOh.pdf"
+          cp cv/main.pdf "$generated_pdf"
+          source_sha="$(git hash-object cv/main.tex)"
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin master
+
+            # Do not publish a stale PDF if a newer TeX file was committed.
+            remote_source_sha="$(git rev-parse origin/master:cv/main.tex)"
+            if [[ "$source_sha" != "$remote_source_sha" ]]; then
+              echo "Newer CV source detected; skipping this outdated build."
+              exit 0
+            fi
+
+            # Rebase the generated PDF on the latest remote commit before pushing.
+            git reset --hard origin/master
+            mkdir -p files
+            cp "$generated_pdf" files/CV_JihwanOh.pdf
+            git add files/CV_JihwanOh.pdf
+            if git diff --cached --quiet; then
+              echo "CV PDF is already current."
+              exit 0
+            fi
+
+            git -c user.name="github-actions[bot]" \
+                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit -m "Update generated CV PDF"
+
+            if git push origin HEAD:master; then
+              echo "CV PDF published successfully."
+              exit 0
+            fi
+            echo "Remote changed during publication (attempt $attempt); retrying."
+          done
+
+          echo "Failed to publish CV PDF after 5 attempts." >&2
+          exit 1
