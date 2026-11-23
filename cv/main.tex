@@ -80,14 +80,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{RESEARCH INTERESTS}
 
-Hardware-software co-design for efficient ML systems.
+GPU architecture and hardware-software co-design for efficient ML training and inference.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{EDUCATION}
 
 \begin{itemize}[leftmargin=1.2em]
     \item \textbf{Stanford University}
-    \hfill Sep.\ 2026 --\\[-0.2em]
+    \hfill Sep.\ 2026 -- Present\\[-0.2em]
     {\smaller[0.6] Ph.D. Student in Electrical Engineering; Advisor: Prof.\ Thierry Tambe}
 \end{itemize}
 
@@ -124,7 +124,8 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 }
 
 {\smaller[0.6]
-\textbf{Best Paper Finalist}; \textit{Presented at IEEE International Symposium on Workload Characterization (IISWC) 2026}
+\textbf{Best Paper Finalist}, \textit{IEEE International Symposium on Workload Characterization (IISWC 2026)},
+\href{https://doi.org/10.1109/IISWC71020.2026.00019}{IEEE~Xplore}
 }
 
 \vspace{0.1cm}
@@ -163,8 +164,20 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
     \item \textit{Ph.D. Researcher (Advisor: Prof.\ Thierry Tambe)}
 \end{description}
 
+\hspace*{0.6em}\textbf{Video Diffusion Quantization}\par\nopagebreak
+
 \begin{itemize}[leftmargin=2em]
-    \item Investigating quantization strategies and their performance implications for efficient ML workloads.
+    \item Profiled quantization sensitivity in the Wan2.1 video diffusion model across latent representations, model blocks, network depth, and denoising timesteps.
+    \item Designed a token-level mixed-precision policy for video frame interpolation based on the quantization sensitivity analysis. The policy uses optical flow to estimate token difficulty and assigns higher precision to harder tokens within a fixed bit budget.
+    \item Developed a training-free velocity correction using RAFT to derive pseudo-targets from the reference frames provided for interpolation. Restored BF16-level PSNR on a 4-bit, 14B video diffusion model.
+\end{itemize}
+
+\vspace{0.08cm}
+
+\hspace*{0.6em}\textbf{Adaptive Rounding for Quantization}\par\nopagebreak
+
+\begin{itemize}[leftmargin=2em]
+    \item Investigating how to extend adaptive rounding from post-training weight quantization to activation quantization during real-time inference.
 \end{itemize}
 
 \vspace{0.18cm}
@@ -177,12 +190,13 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 \end{description}
 
 \begin{itemize}[leftmargin=2em]
-    \item Used GPU profiling to characterize compute-communication overlap in distributed LLM training, identifying hardware-level overheads that can make aggressive overlap degrade performance and power efficiency.
-    \item Designed a TMA-driven NCCL communication protocol that stages data in otherwise unused shared memory, achieving comparable or higher bandwidth with roughly 50\% fewer SMs in microbenchmarks.
+    \item Characterized compute-communication overlap in distributed LLM training through GPU profiling, identifying hardware-level overheads that can degrade performance and power efficiency.
+    \item Designed and implemented a TMA-driven NCCL communication protocol to overlap data transfers with GPU computation by staging data in otherwise unused shared memory.
 \end{itemize}
 
 \vspace{0.18cm}
 
+\noindent\begin{minipage}{\linewidth}
 \textbf{Computer Architecture and Systems Lab, KAIST}
 \hfill Sep.\ 2024 -- Dec.\ 2024
 
@@ -194,6 +208,7 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
     \item Analyzed NPU-PIM load imbalance during LLM inference on \textit{NeuPIMs} and designed FFN workload redistribution to improve utilization and end-to-end performance.
     \item Surveyed quantization methods and conducted accuracy benchmarks across multiple models.
 \end{itemize}
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resumesection{ADDITIONAL EXPERIENCE}
@@ -201,7 +216,8 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 \textbf{Teaching Assistant}, KAIST
 
 \begin{itemize}[leftmargin=1.2em]
-    \item Introduction to Programming (Fall 2025); Immersion Camp (Oct.\ 2023 -- Feb.\ 2024).
+    \item CS.10001: Introduction to Programming \hfill Sep.\ 2025 -- Dec.\ 2025
+    \item CS.93000: Immersion Camp \hfill Oct.\ 2023 -- Feb.\ 2024
 \end{itemize}
 
 \vspace{0.05cm}
@@ -211,6 +227,15 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 
 \begin{itemize}[leftmargin=1.2em]
     \item Developed a VR flight-training simulator in Unreal Engine 4 and C++; selected to present it at the 2022 ROKAF Information \& Communication Development Conference.
+\end{itemize}
+
+\vspace{0.05cm}
+
+\textbf{Public Relations Head}, ICISTS
+\hfill 2019 -- 2021
+
+\begin{itemize}[leftmargin=1.2em]
+    \item Led outreach and coordinated founder talks for GRAFFITI, a student-run startup festival at KAIST.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,6 +260,12 @@ Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan
 
     \item \textbf{uArch Mentoring Workshop Full Travel Grant}, uArch @ ISCA 2025
     \hfill 2025
+
+    \vspace{0.03cm}
+
+    \item \textbf{Korea-U.S. Student Exchange Program Scholarship}
+    \hfill 2024\\
+    Korea Institute for Advancement of Technology, KIAT
 
     \vspace{0.03cm}
 

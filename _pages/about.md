@@ -540,8 +540,9 @@ redirect_from:
     <article class="jo-publication">
       <div class="jo-pub-meta"><span>IISWC 2026</span><span>Conference</span><span>Best Paper Finalist</span></div>
       <h3>Compute-Communication Overlap Is Not Free: A Cross-Layer Characterization in GPU LLM Workloads</h3>
-      <p class="jo-authors"><strong>Jihwan Oh</strong>, Seokjin Go, Junkyum Kim, Jongse Park, Divya Mahajan</p>
+      <p class="jo-authors"><strong>Jihwan Oh</strong>, Junkyum Kim, Seokjin Go, Jongse Park, Divya Mahajan</p>
       <p class="jo-copy">A cross-layer study of compute-communication overlap overheads in GPU LLM workloads, exposing hardware-level costs that can be hidden at the software layer.</p>
+      <p class="jo-copy"><a href="https://doi.org/10.1109/IISWC71020.2026.00019">IEEE Xplore</a></p>
     </article>
     <article class="jo-publication">
       <div class="jo-pub-meta"><span>ISPASS 2025</span><span>Poster</span></div>
@@ -632,6 +633,15 @@ redirect_from:
       <li>Student Travel Grant, IEEE ISPASS 2025</li>
       <li>Korea-U.S. Student Exchange Program Scholarship, KIAT, 2024</li>
       <li>National Science and Technology Scholarship, Korea Government, 2021 - 2024</li>
+    </ul>
+  </section>
+
+  <section class="jo-section" id="outside-research">
+    <h2>Outside Research</h2>
+    <p class="jo-copy">At KAIST, I was a student model with MOKA (Model of KAIST) and appeared in videos on the university's YouTube channel.</p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=k6Lww1JLjbQ">Graduates Meet Their First-Year Selves</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ZJl_9cpaFjY">Campus Quiz and Summer Break Tips</a></li>
     </ul>
   </section>
 
