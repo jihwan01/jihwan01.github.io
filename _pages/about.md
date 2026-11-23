@@ -448,14 +448,33 @@ redirect_from:
     line-height: 1.65;
   }
 
-  .jo-about ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 16px;
-    margin: 4px 0 0;
-    padding: 0;
-    list-style: none;
+  .jo-about-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 12px;
+    max-width: 724px;
+    margin: 10px 0 12px;
+  }
+
+  .jo-about-videos figure {
+    display: block;
+    margin: 0;
+  }
+
+  .jo-about-videos iframe {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 6px;
+    background: var(--jo-soft);
+  }
+
+  .jo-about-videos figcaption {
+    margin: 5px 0 0;
     font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   @media (max-width: 760px) {
@@ -676,11 +695,17 @@ redirect_from:
 
   <aside class="jo-about" id="outside-research" aria-labelledby="about-me-heading">
     <h2 id="about-me-heading">More About Me</h2>
-    <p>I was a student model with <strong>MOKA (Model of KAIST)</strong> and appeared in two videos on KAIST's YouTube channel.</p>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=k6Lww1JLjbQ">Graduates Meet Their First-Year Selves</a></li>
-      <li><a href="https://www.youtube.com/watch?v=ZJl_9cpaFjY">Campus Quiz and Summer Break Tips</a></li>
-    </ul>
+    <p>I appeared in two videos on KAIST's YouTube channel.</p>
+    <div class="jo-about-videos">
+      <figure>
+        <iframe src="https://www.youtube-nocookie.com/embed/k6Lww1JLjbQ" title="Graduates Meet Their First-Year Selves" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <figcaption><a href="https://www.youtube.com/watch?v=k6Lww1JLjbQ">Graduates Meet Their First-Year Selves</a></figcaption>
+      </figure>
+      <figure>
+        <iframe src="https://www.youtube-nocookie.com/embed/ZJl_9cpaFjY" title="Campus Quiz and Summer Break Tips" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <figcaption><a href="https://www.youtube.com/watch?v=ZJl_9cpaFjY">Campus Quiz and Summer Break Tips</a></figcaption>
+      </figure>
+    </div>
     <p>As Public Relations Head at <strong>ICISTS</strong>, I led outreach and helped organize founder talks for GRAFFITI, a student-run startup festival.</p>
   </aside>
 </div>
