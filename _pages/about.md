@@ -608,7 +608,7 @@ redirect_from:
       <div class="jo-timeline-item">
         <span class="jo-date">Jan 2025 - Aug 2026</span>
         <div>
-          <h3><a href="https://www.divyamahajan.com/">Systems Infrastructure and Architecture Research Lab</a>, <a href="https://www.gatech.edu/">Georgia Tech</a></h3>
+          <h3><a href="https://www.divyamahajan.com/">Systems for Scalable Intelligence</a>, <a href="https://www.gatech.edu/">Georgia Tech</a></h3>
           <p class="jo-role">Researcher, advised by <a href="https://www.divyamahajan.com/">Prof. Divya Mahajan</a></p>
           <ul>
             <li>Characterized compute-communication overlap in large-scale distributed LLM training.</li>
