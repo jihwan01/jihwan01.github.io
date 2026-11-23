@@ -428,6 +428,36 @@ redirect_from:
     line-height: 1.65;
   }
 
+  .jo-about {
+    padding: 20px 0 0;
+    scroll-margin-top: 80px;
+  }
+
+  .jo-about h2 {
+    margin: 0 0 8px;
+    padding: 0;
+    border: 0;
+    color: var(--jo-ink);
+    font-size: 1rem;
+  }
+
+  .jo-about p {
+    margin: 8px 0 0;
+    color: var(--jo-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .jo-about ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+
   @media (max-width: 760px) {
     .jo-hero h1 {
       font-size: 2.4rem;
@@ -636,15 +666,6 @@ redirect_from:
     </ul>
   </section>
 
-  <section class="jo-section" id="outside-research">
-    <h2>Outside Research</h2>
-    <p class="jo-copy">At KAIST, I was a student model with MOKA (Model of KAIST) and appeared in videos on the university's YouTube channel.</p>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=k6Lww1JLjbQ">Graduates Meet Their First-Year Selves</a></li>
-      <li><a href="https://www.youtube.com/watch?v=ZJl_9cpaFjY">Campus Quiz and Summer Break Tips</a></li>
-    </ul>
-  </section>
-
   <section class="jo-section" id="contact">
     <h2>Contact</h2>
     <div class="jo-contact">
@@ -652,4 +673,14 @@ redirect_from:
       <p><a href="mailto:jihwanoh@stanford.edu">jihwanoh@stanford.edu</a> | <a href="/files/CV_JihwanOh.pdf">CV</a> | <a href="https://scholar.google.com/citations?user=Ajs3-gwAAAAJ&hl=ko&oi=sra">Google Scholar</a> | <a href="https://github.com/jihwan01">GitHub</a></p>
     </div>
   </section>
+
+  <aside class="jo-about" id="outside-research" aria-labelledby="about-me-heading">
+    <h2 id="about-me-heading">More About Me</h2>
+    <p>I was a student model with <strong>MOKA (Model of KAIST)</strong> and appeared in two videos on KAIST's YouTube channel.</p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=k6Lww1JLjbQ">Graduates Meet Their First-Year Selves</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ZJl_9cpaFjY">Campus Quiz and Summer Break Tips</a></li>
+    </ul>
+    <p>As Public Relations Head at <strong>ICISTS</strong>, I led outreach and helped organize founder talks for GRAFFITI, a student-run startup festival.</p>
+  </aside>
 </div>
