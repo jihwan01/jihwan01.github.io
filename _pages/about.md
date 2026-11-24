@@ -606,6 +606,17 @@ redirect_from:
     <h2>Experience</h2>
     <div class="jo-list">
       <div class="jo-timeline-item">
+        <span class="jo-date">Sep 2026 - Present</span>
+        <div>
+          <h3><a href="https://tambelab.stanford.edu/">Tambe Lab</a>, <a href="https://www.stanford.edu/">Stanford University</a></h3>
+          <p class="jo-role">Ph.D. Researcher, advised by <a href="https://tambelab.stanford.edu/">Prof. Thierry Tambe</a></p>
+          <ul>
+            <li>Exploring quantization for video diffusion models.</li>
+            <li>Investigating adaptive rounding for activation quantization.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jo-timeline-item">
         <span class="jo-date">Jan 2025 - Aug 2026</span>
         <div>
           <h3><a href="https://www.divyamahajan.com/">Systems for Scalable Intelligence</a>, <a href="https://www.gatech.edu/">Georgia Tech</a></h3>
